@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(0, 0%, 100%);
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 페이지 전체 레이아웃 설정 */
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    'aside header'
+    'aside main';
+  height: 100vh; /* 화면 전체 높이 */
+  /* 열 너비 설정: 첫 번째 열은 260px, 두 번째 열은 자동 크기 */
+  grid-template-columns: 260px auto;
+  /* 행 높이 설정: 첫 번째 행은 54px, 두 번째 행은 자동 크기 */
+  grid-template-rows: 54px auto;
+}
+
+/* header 설정 */
+.header {
+  grid-area: header;
+  background-color: white;
+  /* border: 1px solid; */
+}
+/* header-bar 설정 */
+.header > .header-bar {
+  width: 100%;
+  height: 90%;
+  min-width: 700px;
+  position: relative;
+  top: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 왼쪽 플레이 버튼 설정 */
+.header > .header-bar > .left-play-btn {
+  height: 100%;
+  position: relative;
+  left: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+/* 왼쪽 플레이 버튼 아이콘 설정 */
+.header > .header-bar > .left-play-btn > a > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* center-song-info 설정 */
+.header > .header-bar > .center-song-info {
+  border: 1px solid;
+  height: 90%;
+  border-radius: 30px;
+  width: 50%;
+  min-width: 400px;
+
+  font-size: 0.9rem;
+  text-align: center;
+  margin-left: 10px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  position: relative;
+}
+/* center-song-info 첫 자식 요소 위치 설정 */
+.header > .header-bar > .center-song-info > div:first-child {
+  position: absolute;
+  left: 0;
+}
+/* center-song-info 마지막 자식 요소 위치 설정 */
+.header > .header-bar > .center-song-info > div:last-child {
+  margin: 0 auto;
+}
+
+/* right-etc 설정 */
+.header > .header-bar > .right-etc {
+  height: 100%;
+  width: 25%;
+  min-width: 200px;
+  position: relative;
+  right: 4%;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 10px;
+}
+
+/* right-etc input 필드 설정 */
+.header > .header-bar > .right-etc > input {
+  position: relative;
+  left: -15%;
+  width: 100px;
+}
+/* right-etc 링크 설정 */
+.header > .header-bar > .right-etc > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 업로드 버튼 설정 */
+.header > .header-bar > .right-etc > .upload {
+  border: 1px solid;
+  height: 70%;
+  width: 100px;
+  display: flex;
+  border-radius: 5px;
+
+  background-color: rgb(200, 200, 200);
+}
+/* 업로드 버튼 내부 링크 설정 */
+.header > .header-bar > .right-etc > .upload > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+}
+
+/* 로그인 버튼 설정 */
+.header > .header-bar > .right-etc > .login {
+  border: 1px solid;
+  height: 70%;
+  width: 100px;
+  display: flex;
+  border-radius: 5px;
+
+  background-color: rgb(200, 200, 200);
+}
+
+/* 로그인 버튼 내부 링크 설정 */
+.header > .header-bar > .right-etc > .login > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  font-weight: bold;
+}
+
+/* 미디어 쿼리: 최대 너비 1630px일 때 */
+@media (max-width: 1630px) {
+  input[type='range'] {
+    display: none;
+  }
+}
+
+/* 미디어 쿼리: 최대 너비 1240px일 때 */
+@media (max-width: 1240px) {
+  .left-play-btn > a {
+    display: none;
+  }
+}
+
+/* 사이드바 스타일 설정 */
+.aside {
+  position: relative;
+  grid-area: aside;
+  height: 100%;
+  background-color: #ffc9b6;
+}
+
+/* 로고 영역 설정 */
+.side-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: white;
+}
+.side-logo img {
+  width: 54px;
+  height: 54px;
+  margin-right: 10px;
+  margin-left: 30px;
+}
+.side-logo h1 {
+  font-size: 40px;
+  margin: 0;
+  line-height: 54px;
+
+  color: #ff6f61;
+}
+
+/* 메뉴 div 부분 설정 */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 검색 박스 크기 조정 */
+.search-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* 검색박스 입력 부분 설정 */
+.search-box input {
+  width: 100%;
+  height: 32px;
+  padding: 5px 10px 5px 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 3px #ff6f6180;
+}
+
+/* 검색박스 아이콘 설정 */
+.search-box > .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffb398;
+}
+
+/* 메뉴 전체 설정 */
+.menu {
+  width: 100%;
+}
+
+/* 메뉴 목록 설정 */
+.menu-item {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  padding: 10px;
+  margin-bottom: 10px; /* 메뉴 항목 간 간격 */
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid#ccc;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 고객센터 버튼 설정 */
+.customer-support {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  cursor: pointer;
+}
+.customer-support .material-symbols-outlined {
+  color: #b5b2b2;
+}
+
+/* 고객센터 버튼 미디어 쿼리 */
+@media (max-height: 400px) {
+  .customer-support {
+    display: none;
+  }
+}
+
+/* 메뉴 아이콘 설정 */
+.menu-item > .side-menu-icon {
+  color: #ffb398;
+}
+
+/* 메뉴 이벤트 처리 */
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* 아이콘과 텍스트 간격 */
+.menu-item span {
+  margin-right: 10px;
+}
+
+/* 메인 콘텐츠 영역 스타일 설정 */
+.main {
+  grid-area: main;
+  overflow: hidden;
+  background-color: #f4c3f7;
+  height: 100%;
+}
