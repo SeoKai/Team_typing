@@ -1,5 +1,9 @@
+/* 나눔고딕 폰트 설정 */
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
 * {
   box-sizing: border-box;
+  font-family: "Nanum Gothic";
 }
 body {
   background-color: hsl(0, 0%, 100%);
@@ -15,158 +19,201 @@ a {
   text-decoration: none;
   color: black;
 }
-
-/* 페이지 전체 레이아웃 설정 */
 .wrapper {
   display: grid;
   grid-template-areas:
     "aside header"
     "aside main";
   height: 100vh; /* 화면 전체 높이 */
-  /* 열 너비 설정: 첫 번째 열은 260px, 두 번째 열은 자동 크기 */
   grid-template-columns: 260px auto;
-  /* 행 높이 설정: 첫 번째 행은 54px, 두 번째 행은 자동 크기 */
   grid-template-rows: 54px auto;
 }
 
-/* header 설정 */
 .header {
+  /* fix할거면
+  position: fixed;
+  width: calc(100% - 260px); left: 260px; */
+  width: 100%;
+  height: 54px;
   grid-area: header;
   background-color: white;
   /* border: 1px solid; */
 }
-/* header-bar 설정 */
 .header > .header-bar {
   width: 100%;
-  height: 90%;
-  min-width: 700px;
-  position: relative;
-  top: 2px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-/* 왼쪽 플레이 버튼 설정 */
-.header > .header-bar > .left-play-btn {
   height: 100%;
-  position: relative;
-  left: 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-/* 왼쪽 플레이 버튼 아이콘 설정 */
-.header > .header-bar > .left-play-btn > a > span {
+
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
-/* center-song-info 설정 */
-.header > .header-bar > .center-song-info {
-  border: 1px solid;
-  height: 90%;
-  border-radius: 30px;
-  width: 50%;
-  min-width: 400px;
-
-  font-size: 0.9rem;
-  text-align: center;
-  margin-left: 10px;
-
-  display: flex;
-  justify-content: start;
-  align-items: center;
-
-  position: relative;
-}
-/* center-song-info 첫 자식 요소 위치 설정 */
-.header > .header-bar > .center-song-info > div:first-child {
-  position: absolute;
-  left: 0;
-}
-/* center-song-info 마지막 자식 요소 위치 설정 */
-.header > .header-bar > .center-song-info > div:last-child {
-  margin: 0 auto;
-}
-
-/* right-etc 설정 */
-.header > .header-bar > .right-etc {
+.header > .header-bar > .left {
   height: 100%;
-  width: 25%;
-  min-width: 200px;
-  position: relative;
-  right: 4%;
-
+  width: 20%;
+  min-width: 100px;
   display: flex;
   justify-content: right;
   align-items: center;
+  margin-left: 10px;
+}
+.header > .header-bar > .left > .play-btn {
+  height: 100%;
+  width: 90%;
+  display: flex;
   gap: 10px;
-}
-
-/* right-etc input 필드 설정 */
-.header > .header-bar > .right-etc > input {
-  position: relative;
-  left: -15%;
-  width: 100px;
-}
-/* right-etc 링크 설정 */
-.header > .header-bar > .right-etc > a {
-  display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
-/* 업로드 버튼 설정 */
-.header > .header-bar > .right-etc > .upload {
+.wrapper > .header > .header-bar > .left > .play-btn > a {
+  height: 25px;
+  width: 25px;
+}
+.wrapper > .header > .header-bar > .left > .play-btn > a > span {
+  height: 25px;
+  width: 25px;
+}
+
+.wrapper > .header > .header-bar > .center {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 30px;
+}
+.wrapper > .header > .header-bar > .center > .song-info {
+  height: 90%;
+  width: 60%;
   border: 1px solid;
+  min-width: 500px;
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.wrapper > .header > .header-bar > .center > .song-info > span {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 25px;
+}
+.wrapper > .header > .header-bar > .center > .song-info > span > img {
+  height: 35px;
+  width: 35px;
+}
+.wrapper > .header > .header-bar > .center > .song-info > div {
+  height: 100%;
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 25px;
+}
+.wrapper > .header > .header-bar > .center > .song-info > div > a {
+  margin-top: 10px;
+  height: 100%;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.wrapper > .header > .header-bar > .center > .song-sound {
+  height: 20px;
+  width: 10%;
+  max-width: 100px;
+  min-width: 60px;
+}
+.wrapper > .header > .header-bar > .center > .song-sound > input {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper > .header > .header-bar > .right {
+  height: 100%;
+  width: 10%;
+  min-width: 200px;
+  display: flex;
+  gap: 15px;
+  justify-content: right;
+  align-items: center;
+  margin-right: 10px;
+}
+.wrapper > .header > .header-bar > .right > .upload {
   height: 70%;
   width: 100px;
-  display: flex;
+  border: 1px solid;
   border-radius: 5px;
-
   background-color: rgb(200, 200, 200);
-}
-/* 업로드 버튼 내부 링크 설정 */
-.header > .header-bar > .right-etc > .upload > a {
+
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+}
+.wrapper > .header > .header-bar > .right > .upload > a {
+  height: 100%;
+  width: 100%;
   font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-/* 로그인 버튼 설정 */
-.header > .header-bar > .right-etc > .login {
-  border: 1px solid;
+.wrapper > .header > .header-bar > .right > .login {
   height: 70%;
   width: 100px;
-  display: flex;
+  border: 1px solid;
   border-radius: 5px;
-
   background-color: rgb(200, 200, 200);
-}
 
-/* 로그인 버튼 내부 링크 설정 */
-.header > .header-bar > .right-etc > .login > a {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-
+}
+.wrapper > .header > .header-bar > .right > .login > a {
+  height: 100%;
+  width: 100%;
   font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-/* 미디어 쿼리: 최대 너비 1630px일 때 */
+/* Right 업로드 로그인 숨기기 */
 @media (max-width: 1630px) {
-  input[type="range"] {
+  .wrapper > .header > .header-bar > .right {
     display: none;
   }
+  .wrapper > .header > .header-bar > .center > .so ng-info {
+    max-width: 500px;
+  }
 }
-
-/* 미디어 쿼리: 최대 너비 1240px일 때 */
+/* 플레이어, 음량 조절 숨기기 */
 @media (max-width: 1240px) {
-  .left-play-btn > a {
+  .wrapper > .header > .header-bar > .left {
     display: none;
+  }
+  .wrapper > .header > .header-bar > .center {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper > .header > .header-bar > .center > .song-sound {
+    width: 0;
+    display: none;
+  }
+  .wrapper > .header > .header-bar > .center > .song-sound > input {
+    width: 0;
+    display: none;
+  }
+  .wrapper > .header > .header-bar > .center > .song-info {
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -298,6 +345,6 @@ a {
 .main {
   grid-area: main;
   overflow: hidden;
-  background-color: #f4c3f7;
+  background-color: whitesmoke;
   height: 100%;
 }
