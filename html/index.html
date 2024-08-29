@@ -11,7 +11,7 @@
     />
     <style>
       .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       }
     </style>
     <!-- css -->
@@ -64,17 +64,19 @@
             <!-- 중앙 노래 정보 영역 -->
             <div class="song-info">
               <!-- 로고 이미지 -->
-              <span href=""><img src="../img/로고고양이.png" /></span>
+              <img src="../img/로고고양이.png" />
               <div>
                 <!-- 노래 제목 및 아티스트 정보 -->
-                <a href=""
-                  >Paint this love<br />JUN.K-Paint this love - Singles</a
-                >
+                <a href=""><b>앨범명</b></a>
+                <a href="">가수 - 제목</a>
               </div>
             </div>
-            <div class="song-sound">
-              <!-- 볼륨 조절 슬라이더 -->
-              <input type="range" />
+            <!-- 사운드 컨트롤러 영역 -->
+            <div class="sound-control">
+              <span class="sound-icon material-symbols-outlined"
+                >volume_up</span
+              >
+              <input type="range" min="0" max="100" value="50" />
             </div>
           </div>
           <!-- 오른쪽 기타 기능 영역-->
@@ -133,7 +135,20 @@
         </div>
       </div>
       <!-- 메인 콘텐츠 영역 -->
-      <div class="main"></div>
+      <div class="main">
+        <div class="main-container">
+          <div class="section" id="section1">
+            <!-- 첫 번째 섹션 -->
+          </div>
+          <div class="section" id="section2">
+            <!-- 두 번째 섹션 -->
+          </div>
+          <!-- 세 번째 섹션 -->
+          <div class="section" id="section3"></div>
+          <!-- 네 번째 섹션 -->
+          <div class="section" id="section4"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
