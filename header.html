@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+    <!-- css -->
+    <link rel="stylesheet" href="./header.css" />
+</head>
+
+<!-- header 기본 구조   : width 100% 기준, 약간의 간격 제외하고 모두 너비 % -> 반응형
+.wrapper>.header>.header-bar 안에 
+.left>play-btn : 플레이어
+.center>song-info   : 음악 정보
+.center>song-sound  : 음량 조절
+.right>upload       : 업로드
+.right>login        : 로그인
+-->
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-bar">
+                <div class="left">
+                    <div class="play-btn">
+                        <a class="shuffle" href=""><span class="material-symbols-outlined">
+                            shuffle
+                            </span></a>
+                        <a href=""><span class="material-symbols-outlined">
+                            skip_previous
+                            </span></a>
+                        <a href=""><span class="material-symbols-outlined">
+                            play_arrow
+                            </span></a>
+                        <a href=""><span class="material-symbols-outlined">
+                            skip_next
+                            </span></a>
+                        <a href=""><span class="material-symbols-outlined">
+                            repeat
+                            </span></a>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="song-info">
+                        <span href=""><img src="../catch/home.svg"></span>
+                        <div>
+                            <a href="">Paint this love<br>JUN.K-Paint this love - Single</a>
+                        </div>
+                    </div>
+                    <div class="song-sound">
+                        <input type="range">
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="upload">
+                        <a href="">
+                            <span class="material-symbols-outlined">upload</span>
+                            업로드
+                        </a>
+                    </div>
+                    <div class="login">
+                        <a href="">
+                            <span class="material-symbols-outlined">person</span>
+                            로그인
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="aside"></div>
+        <div class="main"></div>
+    </div>
+</body>
+</html>
