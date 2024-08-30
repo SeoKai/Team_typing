@@ -1,0 +1,132 @@
+/* 나눔고딕 폰트 설정 */
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+/* 모든 요소에 박스 모델과 나눔고딕 폰트 적용 */
+* {
+  box-sizing: border-box;
+  font-family: 'Nanum Gothic';
+}
+
+/* 배경색 설정과 기본 여백 제거 */
+body {
+  background-color: hsl(0, 0%, 100%);
+  margin: 0;
+  padding: 0;
+  min-width: 540px;
+}
+
+/* 목록 스타일 초기화 */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 링크 스타일 설정 */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  border: none;
+}
+/* 메인 콘텐츠 영역 설정 */
+.main {
+  grid-area: main;
+  background-color: whitesmoke;
+  height: 100%;
+}
+
+/* 메인 컨테이너 설정 */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* 섹션 스타일 */
+.section {
+  background-color: #d6d6d6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.section:nth-child(1){
+  height: 300px;  width: 100%;
+  background-color: #ffe1d6;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 30px 0;
+  border: 3px solid lightgray;
+}
+.section:nth-child(1)>.artist-img{
+  height: 100%;  width: 240px;
+  margin-left: 30px;
+  margin-right: 40px;
+}
+.section:nth-child(1)>.artist-img>img{
+  height: 240px; width: 240px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.section:nth-child(1)>.album-info{
+  height: auto;
+  width: 100%;
+}
+.section:nth-child(1)>.album-info>.album-title{
+  height: auto; width: 100%;
+  font-size: 35px;
+  color: black;
+  margin-bottom: 8px;
+}
+.section:nth-child(1)>.album-info>.artist-name{
+  height: auto; width: 100%;
+  margin-bottom:10px;
+}
+.section:nth-child(1)>.album-info>.artist-name>a{
+  height: auto; width: 100%;
+  font-size: 30px;
+  color: #ffb398;
+}
+.section:nth-child(1)>.album-info>.album-date{
+  height: auto; width: 100%;
+  font-size: 15px;
+  color: gray;
+}
+.section:nth-child(1)>.album-info>.album-button{
+  height: auto; width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+.section:nth-child(1)>.album-info>.album-button>button:nth-child(1),
+.section:nth-child(1)>.album-info>.album-button>button:nth-child(2){
+  height: auto; width: auto;
+  padding: 0; margin: 0;
+  font-size: 25px;
+  background-color: #ffe1d6;
+}
+.section:nth-child(1)>.album-info>.play-all{
+  height: 25px; width: 100%;
+  display: flex;
+  align-items: end;
+}
+.section:nth-child(1)>.album-info>.play-all>button{
+  height: auto; width: 80px;
+  font-size: 20px;
+  background-color: #ffb398;
+  color: black;
+  border-radius: 5px;
+}
