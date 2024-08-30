@@ -48,15 +48,32 @@ button {
 }
 
 /* 섹션 스타일 */
+/* common.css에서 주석 처리 필요
+   height, 
+   background-color, 
+   border-radious 
+*/
 .section {
-  background-color: #d6d6d6;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
   overflow: hidden;
 }
+
+/* 1섹션 : 앨범 상세 정보 시작 */
+.section:nth-child(1)
+.section:nth-child(1)>.album-img
+.section:nth-child(1)>.album-img>img
+
+.section:nth-child(1)>.album-info
+.section:nth-child(1)>.album-info>.album-title
+.section:nth-child(1)>.album-info>.album-artist
+.section:nth-child(1)>.album-info>.album-date
+.section:nth-child(1)>.album-info>.album-button
+.section:nth-child(1)>.album-info>.album-button>a
+.section:nth-child(1)>.album-info>.album-play
+.section:nth-child(1)>.album-info>.album-play>a{}
 
 .section:nth-child(1){
   height: 300px;  width: 100%;
@@ -66,18 +83,19 @@ button {
   justify-content: space-between;
   padding: 30px 0;
   border: 3px solid lightgray;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
-.section:nth-child(1)>.artist-img{
+.section:nth-child(1)>.album-img{
   height: 100%;  width: 240px;
   margin-left: 30px;
   margin-right: 40px;
 }
-.section:nth-child(1)>.artist-img>img{
+.section:nth-child(1)>.album-img>img{
   height: 240px; width: 240px;
   background-color: white;
   border-radius: 10px;
 }
-
 .section:nth-child(1)>.album-info{
   height: auto;
   width: 100%;
@@ -88,18 +106,15 @@ button {
   color: black;
   margin-bottom: 8px;
 }
-.section:nth-child(1)>.album-info>.artist-name{
-  height: auto; width: 100%;
-  margin-bottom:10px;
-}
-.section:nth-child(1)>.album-info>.artist-name>a{
-  height: auto; width: 100%;
-  font-size: 30px;
-  color: #ffb398;
+.section:nth-child(1)>.album-info>.album-artist{
+    height: auto; width: 100%;
+    font-size: 30px;
+    margin-bottom:10px;
+    color: #ffb398;
 }
 .section:nth-child(1)>.album-info>.album-date{
   height: auto; width: 100%;
-  font-size: 15px;
+  font-size: 18px;
   color: gray;
 }
 .section:nth-child(1)>.album-info>.album-button{
@@ -111,22 +126,100 @@ button {
   padding-top: 15px;
   padding-bottom: 25px;
 }
-.section:nth-child(1)>.album-info>.album-button>button:nth-child(1),
-.section:nth-child(1)>.album-info>.album-button>button:nth-child(2){
+.section:nth-child(1)>.album-info>.album-button>a,
+.section:nth-child(1)>.album-info>.album-button>a{
   height: auto; width: auto;
   padding: 0; margin: 0;
   font-size: 25px;
   background-color: #ffe1d6;
 }
-.section:nth-child(1)>.album-info>.play-all{
-  height: 25px; width: 100%;
-  display: flex;
-  align-items: end;
-}
-.section:nth-child(1)>.album-info>.play-all>button{
-  height: auto; width: 80px;
-  font-size: 20px;
+.section:nth-child(1)>.album-info>.album-play{
+  height: 25px; width: 80px;
   background-color: #ffb398;
-  color: black;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
+.section:nth-child(1)>.album-info>.album-play>span:nth-child(1){
+  height: auto; width: 20px;
+  font-size: 25px;
+  color: black;
+}
+.section:nth-child(1)>.album-info>.album-play>span:nth-child(2){
+  height: 100%; width: 60px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+/* 1섹션 앨범 상세 정보 끝 */
+
+/* 2섹션 앨범 노래 목록 시작 */
+.section:nth-child(2)
+.section:nth-child(2)>.song-list
+.section:nth-child(2)>.song-list>li
+.section:nth-child(2)>.song-list>li>.song-title
+.section:nth-child(2)>.song-list>li>.song-etc
+.section:nth-child(2)>.song-list>li>.song-etc>.song-time
+.section:nth-child(2)>.song-list>li>.song-etc>a
+.section:nth-child(2)>.song-list>li>.song-etc>a>span
+.section:nth-child(2)>.song-list>li>.song-etc>a>span{}
+
+.section:nth-child(2)>{
+    height: auto;   width: 100%;
+    border-radius: 0px;
+}
+.section:nth-child(2)>.song-list{
+    height: 100%;    width: 100%;
+}
+.section:nth-child(2)>.song-list>li{
+    height: 50px;    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section:nth-child(2)>.song-list>li>.song-title{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.section:nth-child(2)>.song-list>li>.song-title>a{
+    font-size: 20px;
+}
+
+.section:nth-child(2)>.song-list>li>.song-etc{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 15px;
+}
+.section:nth-child(2)>.song-list>li>.song-etc>.song-time{
+    font-size: 15px;
+    color: black;
+}
+.section:nth-child(2)>.song-list>li>.song-etc>.song-set{}
+.section:nth-child(2)>.song-list>li>.song-etc>.song-set>span{
+    font-size: 25px;
+}
+/* 위아래 모서리와 홀짝 배경색 설정 */
+.section:nth-child(2).section:nth-child(2)>.song-list>li:first-child{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.section:nth-child(2).section:nth-child(2)>.song-list>li:last-child{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.section:nth-child(2).section:nth-child(2)>.song-list>li:nth-child(even){
+    background-color: #ffb398;
+}
+.section:nth-child(2).section:nth-child(2)>.song-list>li:nth-child(odd){
+    background-color: #fcc8b5;
+}
+/* 앨범 노래 목록 끝 */
