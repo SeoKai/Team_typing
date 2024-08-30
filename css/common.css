@@ -1,10 +1,10 @@
 /* 나눔고딕 폰트 설정 */
-@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
 
 /* 모든 요소에 박스 모델과 나눔고딕 폰트 적용 */
 * {
   box-sizing: border-box;
-  font-family: 'Nanum Gothic';
+  font-family: "Nanum Gothic";
 }
 
 /* 배경색 설정과 기본 여백 제거 */
@@ -32,8 +32,8 @@ a {
 .wrapper {
   display: grid;
   grid-template-areas:
-    'aside header' /* 첫 번째 행: 사이드바와 헤더 */
-    'aside main'; /* 두 번째 행: 사이드바와 메인 */
+    "aside header" /* 첫 번째 행: 사이드바와 헤더 */
+    "aside main"; /* 두 번째 행: 사이드바와 메인 */
   height: 100vh;
   grid-template-columns: 260px auto; /* 열 너비 설정 */
   grid-template-rows: 54px auto; /* 행 높이 설정 */
@@ -172,7 +172,7 @@ a {
 }
 
 /* 사운드 바 스타일링 */
-input[type='range'] {
+input[type="range"] {
   -webkit-appearance: none; /*WebKit*/
   -moz-appearance: none; /* Firefox */
   appearance: none; /* 표준 속성 */
@@ -187,12 +187,12 @@ input[type='range'] {
 }
 
 /* 호버 시 사운드 바 효과 */
-input[type='range']:hover {
+input[type="range"]:hover {
   opacity: 1;
 }
 
 /* 사운드 바의 슬라이더(thumb) 스타일 */
-input[type='range']::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; /* 기본 슬라이더 스타일 제거 */
   appearance: none;
   width: 15px;
@@ -205,7 +205,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 /* 슬라이더가 활성화되었을 때 스타일 */
-input[type='range']::-webkit-slider-thumb:active {
+input[type="range"]::-webkit-slider-thumb:active {
   background: #ffb398;
 }
 
@@ -439,27 +439,37 @@ input[type='range']::-webkit-slider-thumb:active {
 /* 메인 콘텐츠 영역 설정 */
 .main {
   grid-area: main;
-  background-color: whitesmoke;
-  height: 100%;
+  background-color: rgb(46, 46, 46);
+  height: calc(100vh - 54px);
 }
 
 /* 메인 컨테이너 설정 */
-.main-container {
-  display: flex;
+/* .main-container { */
+/* display: flex;
+  height: 20%;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  margin: 20px;
-}
+  margin: 20px; */
+/* } */
 
 /* 섹션 스타일 */
-.section {
-  height: 350px;
+/* .section {
   background-color: #d6d6d6;
-  color: white;
+  height: 100%;
+  color: rgb(201, 201, 201);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  overflow: hidden;
 }
+
+.grid-item {
+  display: grid;
+  height: 100%;
+  border: 1px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-flow: column;
+  gap: 10px;
+  border: 1px solid black;
+} */
