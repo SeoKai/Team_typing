@@ -139,40 +139,78 @@
       <!-- 메인 콘텐츠 영역 -->
       <div class="main">
         <div class="main-container">
-          <!-- 첫 번째 섹션 -->
+
+          <!-- 첫 번째 섹션 : 앨범 상세 정보 class="album-..."-->
           <div class="section" id="section1">
-            <div class="artist-img">
+            <!-- 앨범 상세 사진 -->
+            <div class="album-img">
               <img src="../img/로고고양이.png" alt="">
             </div>
+            <!-- 앨범 상세 정보 -->
             <div class="album-info">
               <div class="album-title">앨범 제목</div>
-              <div class="artist-name"><a>가수 이름</a></div>
+              <div class="album-artist">가수 이름</div>
               <div class="album-date">발매일자</div>
 
-              <div class="album-button"><button class="material-symbols-outlined">favorite</button>
-                                        <button class="material-symbols-outlined">e911_emergency</button></div>
-              <div class="play-all"><button>듣기</button></div>
+              <!-- 앨범 버튼 -->
+              <div class="album-button"><a href="" class="material-symbols-outlined">favorite</a>
+                                        <a href="" class="material-symbols-outlined">e911_emergency</a></div>
+              <a href="" class="album-play"><span class="material-symbols-outlined">music_note</span><span>듣기</span></a>
             </div>
           </div>
+          
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div class="section" id="section2">
           <!-- 두 번째 섹션 -->
-          </div>
+        <div class="section" id="section2">
+          <!-- 노래 목록 class="song-..." -->
+          <ul class="song-list">
+
+            <!-- 1라인 -->
+            <li>
+                <span class="song-title"><a href="">가을 아침</a></span> 
+
+                <span class="song-etc">
+                    <div class="song-time">5:18</div>
+                    <a href="" class="song-set"><span class="material-symbols-outlined">more_horiz</span></a>
+                </span>
+            </li>
+
+            <li>
+                <span class="song-title"><a href="">스물셋</a></span> 
+
+                <span class="song-etc">
+                    <div class="song-time">3:20</div>
+                    <a href="" class="song-set"><span class="material-symbols-outlined">more_horiz</span></a>
+                </span>
+            </li>
+
+            <li>
+                <span class="song-title"><a href="">너랑 나랑은</a></span> 
+
+                <span class="song-etc">
+                    <div class="song-time">6:57</div>
+                    <a href="" class="song-set"><span class="material-symbols-outlined">more_horiz</span></a>
+                </span>
+            </li>
+          </ul>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          
+          
           <!-- 세 번째 섹션 -->
           <div class="section" id="section3"></div>
           <!-- 네 번째 섹션 -->
