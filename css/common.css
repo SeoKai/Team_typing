@@ -440,7 +440,6 @@ input[type='range']::-webkit-slider-thumb:active {
 .main {
   grid-area: main;
   background-color: whitesmoke;
-  height: 100%;
 }
 
 /* 메인 컨테이너 설정 */
@@ -450,16 +449,38 @@ input[type='range']::-webkit-slider-thumb:active {
   gap: 20px;
   padding: 20px;
   margin: 20px;
+  background-color: bisque;
+}
+
+/* 섹션 헤더 */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 /* 섹션 스타일 */
 .section {
-  height: 350px;
+  height: 300px;
   background-color: #d6d6d6;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  overflow: hidden;
+}
+
+.section-list {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-item {
+  width: 200px;
+  height: 200px;
+  background-color: #333;
+  overflow-y: hidden;
 }
