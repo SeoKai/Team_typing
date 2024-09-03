@@ -7,13 +7,13 @@ document.querySelectorAll('.section-main').forEach((main) => {
 
   rightButton.addEventListener('click', () => {
     const maxScroll = sliderContent.scrollWidth - sliderContent.clientWidth;
-    scrollAmount += 260;
+    scrollAmount = maxScroll;
     if (scrollAmount > maxScroll) scrollAmount = maxScroll;
     sliderContent.style.transform = `translateX(-${scrollAmount}px)`;
   });
 
   leftButton.addEventListener('click', () => {
-    scrollAmount -= 260;
+    scrollAmount = 0;
     if (scrollAmount < 0) scrollAmount = 0;
     sliderContent.style.transform = `translateX(-${scrollAmount}px)`;
   });
