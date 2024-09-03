@@ -1,0 +1,572 @@
+/* 나눔고딕 폰트 설정 */
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+* {
+  box-sizing: border-box;
+  font-family: "Nanum Gothic";
+  list-style: none;
+}
+body {
+  background-color: hsl(0, 0%, 100%);
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "aside header"
+    "aside main";
+  height: 100vh; /* 화면 전체 높이 */
+  grid-template-columns: 260px auto;
+  grid-template-rows: 54px auto;
+}
+
+.header {
+  /* fix할거면
+  position: fixed;
+  width: calc(100% - 260px); left: 260px; */
+  width: 100%;
+  height: 54px;
+  grid-area: header;
+  background-color: white;
+  /* border: 1px solid; */
+}
+.header > .header-bar {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.header > .header-bar > .left {
+  height: 100%;
+  width: 20%;
+  min-width: 100px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-left: 10px;
+}
+.header > .header-bar > .left > .play-btn {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrapper > .header > .header-bar > .left > .play-btn > a {
+  height: 25px;
+  width: 25px;
+}
+.wrapper > .header > .header-bar > .left > .play-btn > a > span {
+  height: 25px;
+  width: 25px;
+}
+
+.wrapper > .header > .header-bar > .center {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 30px;
+}
+.wrapper > .header > .header-bar > .center > .song-info {
+  height: 90%;
+  width: 60%;
+  border: 1px solid;
+  min-width: 500px;
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.wrapper > .header > .header-bar > .center > .song-info > span {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 25px;
+}
+.wrapper > .header > .header-bar > .center > .song-info > span > img {
+  height: 35px;
+  width: 35px;
+}
+.wrapper > .header > .header-bar > .center > .song-info > div {
+  height: 100%;
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 25px;
+}
+.wrapper > .header > .header-bar > .center > .song-info > div > a {
+  margin-top: 10px;
+  height: 100%;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.wrapper > .header > .header-bar > .center > .song-sound {
+  height: 20px;
+  width: 10%;
+  max-width: 100px;
+  min-width: 60px;
+}
+.wrapper > .header > .header-bar > .center > .song-sound > input {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper > .header > .header-bar > .right {
+  height: 100%;
+  width: 10%;
+  min-width: 200px;
+  display: flex;
+  gap: 15px;
+  justify-content: right;
+  align-items: center;
+  margin-right: 10px;
+}
+.wrapper > .header > .header-bar > .right > .upload {
+  height: 70%;
+  width: 100px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: rgb(200, 200, 200);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper > .header > .header-bar > .right > .upload > a {
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.wrapper > .header > .header-bar > .right > .login {
+  height: 70%;
+  width: 100px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: rgb(200, 200, 200);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper > .header > .header-bar > .right > .login > a {
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Right 업로드 로그인 숨기기 */
+@media (max-width: 1630px) {
+  .wrapper > .header > .header-bar > .right {
+    display: none;
+  }
+  .wrapper > .header > .header-bar > .center > .so ng-info {
+    max-width: 500px;
+  }
+}
+/* 플레이어, 음량 조절 숨기기 */
+@media (max-width: 1240px) {
+  .wrapper > .header > .header-bar > .left {
+    display: none;
+  }
+  .wrapper > .header > .header-bar > .center {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper > .header > .header-bar > .center > .song-sound {
+    width: 0;
+    display: none;
+  }
+  .wrapper > .header > .header-bar > .center > .song-sound > input {
+    width: 0;
+    display: none;
+  }
+  .wrapper > .header > .header-bar > .center > .song-info {
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* 사이드바 스타일 설정 */
+.aside {
+  position: relative;
+  grid-area: aside;
+  height: 100%;
+  background-color: #ffc9b6;
+}
+
+/* 로고 영역 설정 */
+.side-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: white;
+}
+.side-logo > img:nth-child(1) {
+  width: 55px;
+  height: 54px;
+  margin-right: 10px;
+  margin-left: 23px;
+}
+
+.side-logo > img:nth-child(2) {
+  width: 150px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* 메뉴 div 부분 설정 */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 검색 박스 크기 조정 */
+.search-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* 검색박스 입력 부분 설정 */
+.search-box input {
+  width: 100%;
+  height: 32px;
+  padding: 5px 10px 5px 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 3px #ff6f6180;
+}
+
+/* 검색박스 아이콘 설정 */
+.search-box > .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffb398;
+}
+
+/* 메뉴 전체 설정 */
+.menu {
+  width: 100%;
+}
+
+/* 메뉴 목록 설정 */
+.menu-item {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  padding: 10px;
+  margin-bottom: 10px; /* 메뉴 항목 간 간격 */
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid#ccc;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 고객센터 버튼 설정 */
+.customer-support {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  cursor: pointer;
+}
+.customer-support .material-symbols-outlined {
+  color: #b5b2b2;
+}
+
+/* 고객센터 버튼 미디어 쿼리 */
+@media (max-height: 500px) {
+  .customer-support {
+    display: none;
+  }
+}
+
+/* 메뉴 아이콘 설정 */
+.menu-item > .side-menu-icon {
+  color: #ffb398;
+}
+
+/* 메뉴 이벤트 처리 */
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* 아이콘과 텍스트 간격 */
+.menu-item span {
+  margin-right: 10px;
+}
+
+/* 메인 콘텐츠 영역 스타일 설정 */
+.main {
+  grid-area: main;
+  overflow: hidden;
+  background-color: whitesmoke;
+  height: 100%;
+  
+  display: block;
+}
+
+
+/* 인기 검색 결과 */
+.main>.chart_search{
+  border: 1px solid;
+  width: 90%;
+  height: 200px;
+
+  position: relative;
+  left: 5%;
+}
+
+/* 인기 검색 결과 헤드 */
+.main>.chart_search>li{
+  border: 1px solid aqua;
+  width: 100%;
+  height: 20px; 
+}
+
+/* 인기 검색 결과 목록 */
+.main>.chart_search>.chart_search_body{
+  width: 100%;
+  height:180px;
+  border:1px solid red;
+  
+  /* align-items: center; */
+  
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+
+.main>.chart_search>.chart_search_body>div{
+  width: 90%;
+  height:90%;
+
+  position: relative;
+  display: flex;
+  justify-content:start; 
+  align-items: center;
+  border:1px solid rgb(0, 238, 255);
+  left: 5%;
+  top: 5%;
+
+}
+/* 제목 가수 */
+.main>.chart_search>.chart_search_body>div>.list{
+  width:100%;
+  height:100%;
+  border: 1px  blue;
+  /* background-color: violet; */
+  position: absolute;
+
+  display: flex;
+  justify-content:end; 
+  align-items: center;
+
+}
+
+.main>.chart_search>.chart_search_body>div>.list>ul{
+  border: 1px solid red;
+  width: 65%;
+  height: 50px;
+  /* left: calc(10% + 50px); */
+
+  position: absolute;
+  display: block;
+  justify-content:center; 
+  align-items: center;
+
+  top: calc(50% - 25px);
+
+ 
+}
+
+.main>.chart_search>.chart_search_body>div>.list>ul>li{
+  border: 1px solid black;
+  width: 100%;
+  height: 50%;
+  position: relative;
+  
+}
+
+/* 이미지 사진 */
+.main>.chart_search>.chart_search_body>div>.img{
+  border: 1px solid gray;
+  width: 50px;
+  height: 50px;
+  left: 10%;
+
+  position: absolute;
+}
+
+/* 인기 아티스트 */
+.main>.chart_art{
+  border: 1px solid gray;
+  width: 90%;
+  height: 200px;
+
+  position: relative;
+  left: 5%;
+  /* background-color: #333; */
+  top: 5%;
+
+  /* overflow: hidden; */
+}
+
+/* 인기 아티스트 헤드 */
+.main>.chart_art>.art_head{
+  border: 1px solid aqua;
+  width: 100%;
+  height: 20px; 
+
+  position: relative;
+}
+
+.main>.chart_art>.art_head>a{
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+}
+
+.main>.chart_art>.art_head>img{
+
+}
+
+
+/* 검색 아티스트 목록 */
+.main>.chart_art>.art_body{
+  width: 100% ;
+  height:calc(100% - 20px);
+
+  /* background-color: gray; */
+  border: 1px solid red;
+  
+  /* div 위치 조정 */
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  overflow-y: hidden;
+  
+  
+}
+
+.main>.chart_art>.art_body>.over_body{
+  width: 200%;
+  height: 20vh;
+  border: 1px solid red;
+
+  position: absolute;
+  
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  gap:4px;
+
+  
+
+}
+
+.main>.chart_art>.art_body>.over_body>div{
+  width: 7%;
+  height: 20vh;
+
+  position: relative;
+  border: 1px solid brown;
+  
+
+  display: block;
+}
+/* 아티스트 사진 */
+.main>.chart_art>.art_body>.over_body>div>.art_img{
+  width: 100%;
+  height: 80%;
+  border: 1px solid red;
+  
+  position: relative;
+  border-radius: 50%;
+}
+
+.main>.chart_art>.art_body>.over_body>div>.art_img>a{
+  width: 100%;
+  height: 100%;
+  background-color: #ffb398;
+
+  position: absolute;
+  
+  border-radius: 50%;
+}
+
+
+
+/* 아티스트 이름*/
+.main>.chart_art>.art_body>.over_body>div>.art_name{
+  width: 100%;
+  height: 20%;
+  border: 1px solid blue;
+
+  /* text-align: center; */
+  /* position: relative;
+  align-items: center; 
+  justify-content: center; */
+}
+
+.main>.chart_art>.art_body>.over_body>div>.art_name>a{
+  width: 100%;
+  height:100%;
+
+  position: absolute;
+ 
+  text-align: center;
+}
+
+/* .main>.chart_art>.button{
+  
+} */

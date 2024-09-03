@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- google icon -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+  </style>
+  <!-- css -->
+  <link rel="stylesheet" href="./css/common.css(1)" />
+</head>
+
+<!-- header 기본 구조   : width 100% 기준, 약간의 간격 제외하고 모두 너비 % -> 반응형
+.wrapper>.header>.header-bar 안에 
+.left>play-btn : 플레이어
+.center>song-info   : 음악 정보
+.center>song-sound  : 음량 조절
+.right>upload       : 업로드
+.right>login        : 로그인
+-->
+
+<body>
+  <div class="wrapper">
+    <!-- 헤더 영역 -->
+    <div class="header">
+      <div class="header-bar">
+        <!-- 왼쪽 그룹 -->
+        <div class="left">
+          <!-- 셔플 버튼 -->
+          <div class="play-btn">
+            <a class="shuffle" href=""><span class="material-symbols-outlined"> shuffle </span></a>
+            <!-- 이전 곡 버튼 -->
+            <a href=""><span class="material-symbols-outlined">
+                skip_previous
+              </span></a>
+            <!-- 재생 버튼 -->
+            <a href=""><span class="material-symbols-outlined"> play_arrow </span></a>
+            <!-- 다음 곡 버튼 -->
+            <a href=""><span class="material-symbols-outlined"> skip_next </span></a>
+            <!-- 반복 버튼 -->
+            <a href=""><span class="material-symbols-outlined"> repeat </span></a>
+          </div>
+        </div>
+        <!-- 중앙 영역 -->
+        <div class="center">
+          <!-- 중앙 노래 정보 영역 -->
+          <div class="song-info">
+            <!-- 로고 이미지 -->
+            <span href=""><img src="../img/로고고양이.png" /></span>
+            <div>
+              <!-- 노래 제목 및 아티스트 정보 -->
+              <a href="">Paint this love<br />JUN.K-Paint this love - Singles</a>
+            </div>
+          </div>
+          <div class="song-sound">
+            <!-- 볼륨 조절 슬라이더 -->
+            <input type="range" />
+          </div>
+        </div>
+        <!-- 오른쪽 기타 기능 영역-->
+        <div class="right">
+          <!-- 업로드 버튼 -->
+          <div class="upload">
+            <a href="">
+              <span class="material-symbols-outlined">upload</span>
+              업로드
+            </a>
+          </div>
+          <!-- 로그인 버튼 -->
+          <div class="login">
+            <a href="">
+              <span class="material-symbols-outlined">person</span>
+              로그인
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 사이드바 영역 -->
+    <div class="aside">
+      <!-- 사이드바 로고 영역 -->
+      <a href="" class="side-logo">
+        <img src="../img/로고고양이.png" alt="Catch-logo" />
+        <img src="../img/nlogo2.png" alt="Catch-logo2" />
+      </a>
+      <!-- 검색 박스 -->
+      <div class="sidebar">
+        <div class="search-box">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input type="text" placeholder="검색" />
+        </div>
+        <!-- 메뉴 항목 -->
+        <div class="menu">
+          <a href="" class="menu-item"><span class="side-menu-icon material-symbols-outlined">home</span>홈</a>
+          <a href="" class="menu-item"><span class="side-menu-icon material-symbols-outlined">settings</span>설정</a>
+          <a href="" class="menu-item"><span class="side-menu-icon material-symbols-outlined">lists</span>재생 목록</a>
+        </div>
+        <!-- 고객 센터 -->
+        <div class="customer-support">
+          <a href=""><span class="material-symbols-outlined">help</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- 메인 콘텐츠 영역 -->
+    <div class="main">
+      <div class="chart_search">
+        <li>인기 검색 결과</li>
+        <div class="chart_search_body">
+          <div>
+            <a class="list" href="">
+              <ul>
+                <li>제목</li>
+                <li>종류 가수</li>
+              </ul>
+            </a>
+            <a class="img" href=""><img src="" alt=""></a>
+          </div>
+          <div>
+            <a class="list" href="">
+              <ul>
+                <li>제목</li>
+                <li>종류 가수</li>
+              </ul>
+            </a>
+            <a class="img" href=""><img src="" alt=""></a>
+          </div>
+          <div>
+            <a class="list" href="">
+              <ul>
+                <li>제목</li>
+                <li>종류 가수</li>
+              </ul>
+            </a>
+            <a class="img" href=""></a>
+          </div>
+          <div>
+            <a class="list" href="">
+              <ul>
+                <li>제목</li>
+                <li>종류 가수</li>
+              </ul>
+            </a>
+            <a class="img" href=""></a>
+          </div>
+          <div>
+            <a class="list" href="">
+              <ul>
+                <li>제목</li>
+                <li>종류 가수</li>
+              </ul>
+            </a>
+            <a class="img" href=""></a>
+          </div>
+          <div>
+            <a class="list" href="">
+              <ul>
+                <li>제목</li>
+                <li>종류 가수</li>
+              </ul>
+            </a>
+            <a class="img" href=""></a>
+          </div>
+          <div>
+            <a class="list" href="">
+              <ul>
+                <li>제목</li>
+                <li>종류 가수</li>
+              </ul>
+            </a>
+            <a class="img" href=""></a>
+          </div>
+          <div>
+            <a class="list" href="">
+              <ul>
+                <li>제목</li>
+                <li>종류 가수</li>
+              </ul>
+            </a>
+            <a class="img" href=""></a>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 가수 검색  -->
+      <div class="chart_art">
+        <div>
+          <div class="art_head">
+            <a href="">아티스트</a>
+            <img src="" alt="">
+          </div>
+          <div class="art_body">
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href="">아이유</a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+            <div>
+              <div class="art_img"><a href=""></a></div>
+              <div class="art_name"><a href=""></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="button">
+            <button class="next"><img src="" alt="">Back</button>
+            <button class="back"><img src="" alt="">Next</button>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
