@@ -32,11 +32,15 @@ a {
 .wrapper {
   display: grid;
   grid-template-areas:
-    'aside header' /* 첫 번째 행: 사이드바와 헤더 */
-    'aside main'; /* 두 번째 행: 사이드바와 메인 */
+    'aside header'
+    /* 첫 번째 행: 사이드바와 헤더 */
+    'aside main';
+  /* 두 번째 행: 사이드바와 메인 */
   height: 100vh;
-  grid-template-columns: 260px auto; /* 열 너비 설정 */
-  grid-template-rows: 54px auto; /* 행 높이 설정 */
+  grid-template-columns: 260px auto;
+  /* 열 너비 설정 */
+  grid-template-rows: 54px auto;
+  /* 행 높이 설정 */
 }
 
 /* 헤더 스타일 설정 */
@@ -61,7 +65,7 @@ a {
 }
 
 /* 헤더 바 왼쪽 영역 설정 */
-.header > .header-bar > .left {
+.header>.header-bar>.left {
   height: 100%;
   width: 20%;
   min-width: 100px;
@@ -72,7 +76,7 @@ a {
 }
 
 /* 재생 버튼 설정 */
-.header > .header-bar > .left > .play-btn {
+.header>.header-bar>.left>.play-btn {
   height: 100%;
   display: flex;
   gap: 15px;
@@ -81,42 +85,51 @@ a {
 }
 
 /* 재생 버튼의 링크 설정 */
-.wrapper > .header > .header-bar > .left > .play-btn > a {
+.wrapper>.header>.header-bar>.left>.play-btn>a {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #353535; /* 아이콘 색상 */
-  font-size: 33px; /* 아이콘 크기 */
+  color: #353535;
+  /* 아이콘 색상 */
+  font-size: 33px;
+  /* 아이콘 크기 */
   padding: 3px;
   cursor: pointer;
-  transition: color 0.2s ease, transform 0.2s ease; /* 색상 및 전환 효과 */
+  transition: color 0.2s ease, transform 0.2s ease;
+  /* 색상 및 전환 효과 */
 }
 
-.wrapper > .header > .header-bar > .left > .play-btn > a:nth-child(1) {
-  font-size: 23px; /* 아이콘 크기 */
-}
-.wrapper > .header > .header-bar > .left > .play-btn > a:nth-child(5) {
-  font-size: 23px; /* 아이콘 크기 */
+.wrapper>.header>.header-bar>.left>.play-btn>a:nth-child(1) {
+  font-size: 23px;
+  /* 아이콘 크기 */
 }
 
-.wrapper > .header > .header-bar > .left > .play-btn > a:nth-child(3) {
-  font-size: 40px; /* 아이콘 크기 */
+.wrapper>.header>.header-bar>.left>.play-btn>a:nth-child(5) {
+  font-size: 23px;
+  /* 아이콘 크기 */
+}
+
+.wrapper>.header>.header-bar>.left>.play-btn>a:nth-child(3) {
+  font-size: 40px;
+  /* 아이콘 크기 */
 }
 
 /* 재생 버튼의 호버 효과 */
-.wrapper > .header > .header-bar > .left > .play-btn > a:hover {
-  color: #ffb093; /* 호버 시 아이콘 색상 변경 */
-  transform: scale(1.05); /* 호버 시 아이콘 약간 확대 */
+.wrapper>.header>.header-bar>.left>.play-btn>a:hover {
+  color: #ffb093;
+  /* 호버 시 아이콘 색상 변경 */
+  transform: scale(1.05);
+  /* 호버 시 아이콘 약간 확대 */
 }
 
 /* 아이콘 크기 및 색상 설정 */
-.wrapper > .header > .header-bar > .left > .play-btn > a > span {
+.wrapper>.header>.header-bar>.left>.play-btn>a>span {
   font-size: inherit;
   color: inherit;
 }
 
 /* 헤더 바 중앙 영역 설정 */
-.wrapper > .header > .header-bar > .center {
+.wrapper>.header>.header-bar>.center {
   height: 100%;
   width: 70%;
   display: flex;
@@ -126,7 +139,7 @@ a {
 }
 
 /* 노래 정보 표시 영역 설정 */
-.wrapper > .header > .header-bar > .center > .song-info {
+.wrapper>.header>.header-bar>.center>.song-info {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,7 +155,7 @@ a {
 }
 
 /* 노래 정보 이미지 스타일 설정 */
-.wrapper > .header > .header-bar > .center > .song-info > img {
+.wrapper>.header>.header-bar>.center>.song-info>img {
   height: 40px;
   position: absolute;
   left: 20px;
@@ -151,7 +164,7 @@ a {
 }
 
 /* 노래 정보 텍스트 설정 */
-.wrapper > .header > .header-bar > .center > .song-info > div {
+.wrapper>.header>.header-bar>.center>.song-info>div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,21 +174,24 @@ a {
 }
 
 /* 노래 정보 링크 스타일 설정 */
-.wrapper > .header > .header-bar > .center > .song-info div a:first-child {
+.wrapper>.header>.header-bar>.center>.song-info div a:first-child {
   font-size: 0.9rem;
   margin-bottom: 2px;
 }
 
-.wrapper > .header > .header-bar > .center > .song-info div a:last-child {
+.wrapper>.header>.header-bar>.center>.song-info div a:last-child {
   font-size: 0.8rem;
   opacity: 0.8;
 }
 
 /* 사운드 바 스타일링 */
 input[type='range'] {
-  -webkit-appearance: none; /*WebKit*/
-  -moz-appearance: none; /* Firefox */
-  appearance: none; /* 표준 속성 */
+  -webkit-appearance: none;
+  /*WebKit*/
+  -moz-appearance: none;
+  /* Firefox */
+  appearance: none;
+  /* 표준 속성 */
   width: 130px;
   height: 7px;
   background: #b3b3b3;
@@ -193,7 +209,8 @@ input[type='range']:hover {
 
 /* 사운드 바의 슬라이더(thumb) 스타일 */
 input[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none; /* 기본 슬라이더 스타일 제거 */
+  -webkit-appearance: none;
+  /* 기본 슬라이더 스타일 제거 */
   appearance: none;
   width: 15px;
   height: 15px;
@@ -218,18 +235,20 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 /* 헤더 바 오른쪽 영역 설정 */
-.wrapper > .header > .header-bar > .right {
+.wrapper>.header>.header-bar>.right {
   height: 100%;
   display: flex;
-  gap: 10px; /* 버튼 사이의 간격을 10px로 설정 */
-  justify-content: flex-end; /* 오른쪽 정렬 */
+  gap: 10px;
+  /* 버튼 사이의 간격을 10px로 설정 */
+  justify-content: flex-end;
+  /* 오른쪽 정렬 */
   align-items: center;
   margin-right: 10px;
 }
 
 /* 공통 버튼 스타일 */
-.wrapper > .header > .header-bar > .right > .upload,
-.wrapper > .header > .header-bar > .right > .login {
+.wrapper>.header>.header-bar>.right>.upload,
+.wrapper>.header>.header-bar>.right>.login {
   height: 32px;
   width: 100px;
   border: 2px solid #bababa;
@@ -242,8 +261,8 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 /* 버튼 내부 링크 설정 */
-.wrapper > .header > .header-bar > .right > .upload > a,
-.wrapper > .header > .header-bar > .right > .login > a {
+.wrapper>.header>.header-bar>.right>.upload>a,
+.wrapper>.header>.header-bar>.right>.login>a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,8 +270,8 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 /* 아이콘 텍스트 간격 설정 */
-.wrapper > .header > .header-bar > .right > .upload > a > span,
-.wrapper > .header > .header-bar > .right > .login > a > span {
+.wrapper>.header>.header-bar>.right>.upload>a>span,
+.wrapper>.header>.header-bar>.right>.login>a>span {
   margin-right: 5px;
   font-size: 24px;
   color: #f8a384;
@@ -260,26 +279,27 @@ input[type='range']::-webkit-slider-thumb:active {
 
 /* Right 업로드 로그인 숨기기 */
 @media (max-width: 1400px) {
-  .wrapper > .header > .header-bar > .right {
+  .wrapper>.header>.header-bar>.right {
     display: none;
   }
 }
 
 /* 1100px 이하 사운드 바만 */
 @media (max-width: 1100px) {
-  .wrapper > .header > .header-bar > .left {
+  .wrapper>.header>.header-bar>.left {
     display: none;
   }
 
-  .wrapper > .header > .header-bar > .center > .sound-control {
+  .wrapper>.header>.header-bar>.center>.sound-control {
     display: none;
   }
 
-  .wrapper > .header > .header-bar {
-    justify-content: center; /* 중앙 정렬 */
+  .wrapper>.header>.header-bar {
+    justify-content: center;
+    /* 중앙 정렬 */
   }
 
-  .wrapper > .header > .header-bar > .center {
+  .wrapper>.header>.header-bar>.center {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -287,8 +307,9 @@ input[type='range']::-webkit-slider-thumb:active {
     margin: 0;
   }
 
-  .wrapper > .header > .header-bar > .center > .song-info {
-    flex-grow: 1; /* 남은 공간을 전부 차지 */
+  .wrapper>.header>.header-bar>.center>.song-info {
+    flex-grow: 1;
+    /* 남은 공간을 전부 차지 */
     max-width: none;
     margin: 0 auto;
     display: flex;
@@ -298,15 +319,17 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 @media (max-width: 767px) {
-  .wrapper > .header > .header-bar > .center > .song-info > img {
-    margin: 0 auto; /* 로고 이미지 중앙 정렬 */
+  .wrapper>.header>.header-bar>.center>.song-info>img {
+    margin: 0 auto;
+    /* 로고 이미지 중앙 정렬 */
     position: relative;
     left: 5px;
   }
 
   /* 제목, 가수, 앨범명 숨기기 */
-  .wrapper > .header > .header-bar > .center > .song-info > div {
-    display: none; /* 제목과 가수, 앨범명 숨기기 */
+  .wrapper>.header>.header-bar>.center>.song-info>div {
+    display: none;
+    /* 제목과 가수, 앨범명 숨기기 */
   }
 }
 
@@ -328,14 +351,15 @@ input[type='range']::-webkit-slider-thumb:active {
   margin-bottom: 20px;
   background-color: white;
 }
-.side-logo > img:nth-child(1) {
+
+.side-logo>img:nth-child(1) {
   width: 55px;
   height: 54px;
   margin-right: 10px;
   margin-left: 23px;
 }
 
-.side-logo > img:nth-child(2) {
+.side-logo>img:nth-child(2) {
   width: 150px;
   height: 50px;
   margin-right: 10px;
@@ -373,7 +397,7 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 /* 검색박스 아이콘 설정 */
-.search-box > .search-icon {
+.search-box>.search-icon {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -392,7 +416,8 @@ input[type='range']::-webkit-slider-thumb:active {
   align-items: center;
   height: 34px;
   padding: 10px;
-  margin-bottom: 10px; /* 메뉴 항목 간 간격 */
+  margin-bottom: 10px;
+  /* 메뉴 항목 간 간격 */
   border-radius: 5px;
   background-color: white;
   border: 1px solid#ccc;
@@ -410,6 +435,7 @@ input[type='range']::-webkit-slider-thumb:active {
   display: flex;
   cursor: pointer;
 }
+
 .customer-support .material-symbols-outlined {
   color: #b5b2b2;
 }
@@ -422,7 +448,7 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 /* 메뉴 아이콘 설정 */
-.menu-item > .side-menu-icon {
+.menu-item>.side-menu-icon {
   color: #ffb398;
 }
 
@@ -467,7 +493,7 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 /* 인기 검색 결과 */
-.main>.chart_search{
+.main>.chart_search {
   border: 1px solid;
   width: 100%;
   height: 300px;
@@ -478,7 +504,7 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 /* 인기 검색 결과 헤드 */
-.main>.chart_search>li{
+.main>.chart_search>li {
   border: 1px solid aqua;
   width: 100%;
   height: 30px;
@@ -488,73 +514,74 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 /* 인기 검색 결과 목록 바디  */
-.main>.chart_search>.chart_search_body{
+.main>.chart_search>.chart_search_body {
   width: 100%;
-  height:calc(100% - 30px);
-  border:1px solid red;
-  
+  height: calc(100% - 30px);
+  border: 1px solid red;
+
   /* align-items: center; */
   /* position: absolute; */
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* 인기 검색결과 리스트들  */
-.main>.chart_search>.chart_search_body>div{
+.main>.chart_search>.chart_search_body>div {
   width: 90%;
-  height:90%;
+  height: 90%;
 
   position: relative;
   display: flex;
-  justify-content:start; 
+  justify-content: start;
   align-items: center;
-  border:1px solid rgb(0, 238, 255);
+  border: 1px solid rgb(0, 238, 255);
   left: 5%;
   top: 5%;
 
 }
+
 /* 제목 가수 */
-.main>.chart_search>.chart_search_body>div>.list{
-  width:100%;
-  height:100%;
-  border: 1px  blue;
+.main>.chart_search>.chart_search_body>div>.list {
+  width: 100%;
+  height: 100%;
+  border: 1px blue;
   /* background-color: violet; */
   position: absolute;
 
   display: flex;
-  justify-content:end; 
+  justify-content: end;
   align-items: center;
 
 }
 
-.main>.chart_search>.chart_search_body>div>.list>ul{
+.main>.chart_search>.chart_search_body>div>.list>ul {
   border: 1px solid red;
   width: 65%;
   height: calc(1vh + 4vw);
   min-height: 60px;
-  
+
   /* left: calc(10% + 50px); */
 
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content:center; 
+  justify-content: center;
   align-items: center;
 
 }
 
-.main>.chart_search>.chart_search_body>div>.list>ul>li{
+.main>.chart_search>.chart_search_body>div>.list>ul>li {
   border: 1px solid black;
   width: 100%;
   height: 50%;
   position: relative;
-  
+
   display: flex;
   align-items: center;
 }
 
 /* 이미지 사진 */
-.main>.chart_search>.chart_search_body>div>.img{
+.main>.chart_search>.chart_search_body>div>.img {
   border: 1px solid gray;
   width: calc(1vh + 4vw);
   min-width: 60px;
@@ -565,12 +592,10 @@ input[type='range']::-webkit-slider-thumb:active {
   position: absolute;
 }
 
-.main>.chart_search>.chart_search_body>div>.img{
-
-}
+.main>.chart_search>.chart_search_body>div>.img {}
 
 /* 인기 아티스트 */
-.main>.chart_art{
+.main>.chart_art {
   border: 1px solid gray;
   width: 100%;
   height: 200px;
@@ -578,21 +603,21 @@ input[type='range']::-webkit-slider-thumb:active {
   position: relative;
   top: 20px;
   /* background-color: #333; */
- 
+
 
   /* overflow: hidden; */
 }
 
 /* 인기 아티스트 헤드 */
-.main>.chart_art>.art_head{
+.main>.chart_art>.art_head {
   border: 1px solid aqua;
   width: 100%;
-  height: 20px; 
+  height: 20px;
 
   position: relative;
 }
 
-.main>.chart_art>.art_head>a{
+.main>.chart_art>.art_head>a {
   width: 100%;
   height: 100%;
 
@@ -603,26 +628,63 @@ input[type='range']::-webkit-slider-thumb:active {
 
 
 /* 검색 아티스트 목록 */
-.main>.chart_art>.art_body{
-  width: 100% ;
-  height:calc(100% - 20px);
+.main>.chart_art>.art_body {
+  width: 100%;
+  height: calc(100% - 20px);
 
   /* background-color: gray; */
   border: 1px solid red;
-  
+
   /* div 위치 조정 */
   position: relative;
   display: flex;
   justify-content: start;
   align-items: center;
-  
-  background-color:  orange;
-  /* overflow-y: hidden; */
-  
-  
+
+  /* background-color:  orange; */
+  overflow: hidden;
 }
+
+/* 버튼 */
+.main>.chart_art>.art_body>.button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 1px solid violet;
+  background-color: red;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.main>.chart_art>.art_body>.button>button {
+  width: 40px;
+  display: none;
+}
+
+/* .main>.chart_art>.art_body>.button>button>.left:hover {
+  display:  ;
+
+}
+  .main>.chart_art>.art_body>.button>button>.right:hover {
+  display: ;
+
+} */
+.main>.chart_art>.art_body>.button>.next:hover button {
+  display: flex;
+}
+.main>.chart_art>.art_body>.button>.back:hover button {
+  display: flex;
+}
+
+/* .main>.chart_art>.art_body>.button>.next::after~.over_body {
+  left: 200px;
+} */
+
+
+
 /* 오버플러우 */
-.main>.chart_art>.art_body>.over_body{
+.main>.chart_art>.art_body>.over_body {
   width: 200%;
   height: 110px;
   /* max-height: 80%;
@@ -631,59 +693,60 @@ input[type='range']::-webkit-slider-thumb:active {
 
   /* background-color: blue; */
   position: absolute;
-  
-  display: flex;
-  justify-content:space-around;
-  align-items: center;
-  gap:5px;
 
-  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+
+
 
 }
 
 /* 아티스트 오버 안에 목록들 */
-.main>.chart_art>.art_body>.over_body>div{
+.main>.chart_art>.art_body>.over_body>div {
   width: 9%;
   height: 100%;
   min-height: 80px;
   position: relative;
   border: 1px solid brown;
-  
+
 
 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 /* 아티스트 사진 */
-.main>.chart_art>.art_body>.over_body>div>.art_img{
+.main>.chart_art>.art_body>.over_body>div>.art_img {
   width: calc(4vw + 2vh);
   min-width: 80px;
   height: calc(4vw + 2vh);
   /* min-height: 70% ; */
   min-height: 80px;
   max-height: 100%;
-  
+
   border: 1px solid red;
-  
+
   position: relative;
   border-radius: 50%;
 }
 
 
 
-.main>.chart_art>.art_body>.over_body>div>.art_img>a{
+.main>.chart_art>.art_body>.over_body>div>.art_img>a {
   width: 100%;
   height: 100%;
   /* background-color: #ffb398; */
 
   position: absolute;
-  
+
   border-radius: 50%;
 
 }
 
-.main>.chart_art>.art_body>.over_body>div>.art_img>a>img{
+.main>.chart_art>.art_body>.over_body>div>.art_img>a>img {
   border-radius: 50%;
 }
 
@@ -699,20 +762,20 @@ input[type='range']::-webkit-slider-thumb:active {
 
 
 /* 아티스트 이름*/
-.main>.chart_art>.art_body>.over_body>div>.art_name{
+.main>.chart_art>.art_body>.over_body>div>.art_name {
   width: 100%;
   height: 20%;
   border: 1px solid blue;
 
   /* text-align: center; */
   position: relative;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
 }
 
-.main>.chart_art>.art_body>.over_body>div>.art_name>a{
+.main>.chart_art>.art_body>.over_body>div>.art_name>a {
   width: 100%;
-  height:100%;
+  height: 100%;
 
   position: absolute;
   font-size: 1rem;
