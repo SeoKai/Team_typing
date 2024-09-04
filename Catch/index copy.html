@@ -14,7 +14,7 @@
     }
   </style>
   <!-- css -->
-  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/common copy.css" />
 </head>
 
 <!-- header 기본 구조   : width 100% 기준, 약간의 간격 제외하고 모두 너비 % -> 반응형
@@ -197,9 +197,11 @@
           <a href="">아티스트</a>
         </div>
         <div class="art_body">
-          <div class = 'button'>
-            <button class="next"><img src="./img/back.svg" alt=""></button>
-            <button class="prev"><img src="./img/next.svg" alt=""></button>
+          <div class='button'>
+            <input type="radio" id="prev">
+            <input type="radio" id="next">
+            <label for="prev"><span class="s-prev">left</span></label>
+            <label for="next"><span class="s-next">right</span></label>
           </div>
           <div class="over_body">
             <div>
@@ -268,7 +270,7 @@
             </div>
           </div>
           <!-- 노래 검색 -->
-           
+
         </div>
       </div>
 

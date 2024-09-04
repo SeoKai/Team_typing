@@ -612,7 +612,7 @@ input[type='range']::-webkit-slider-thumb:active {
 
 /* 인기 아티스트 헤드 */
 .main>.chart_art>.art_head {
-  /* border: 1px solid aqua; */
+  border: 1px solid aqua;
   width: 100%;
   height: 30px;
   font-size: 20px;
@@ -637,7 +637,7 @@ input[type='range']::-webkit-slider-thumb:active {
   height: calc(100% - 20px);
 
   /* background-color: gray; */
-  /* border: 1px solid red; */
+  border: 1px solid red;
 
   /* div 위치 조정 */
   position: relative;
@@ -648,49 +648,17 @@ input[type='range']::-webkit-slider-thumb:active {
   /* background-color:  orange; */
   overflow: hidden;
 }
-
-/* 버튼 */
-.main>.chart_art>.art_body>.button {
+.main>.chart_art>.art_body>.button{
   width: 100%;
   height: 100%;
+  
+  background-color: red;
+}
+.main>.chart_art>.art_body>.button>label{
+  width: 100%;
   position: absolute;
-  /* border: 1px solid violet; */
-  /* background-color: red; */
-  /* background-color: #f0f0f000; */
-
-  display: flex;
-  justify-content: space-between;
-  
-
+  background-color: #333;
 }
-
-.main>.chart_art>.art_body>.button>button {
-  width: 40px;
-  height : 100%;
-  display: block;
-  background-color: #0505052f;
-  border: 1px solid rgba(255, 0, 0, 0.068);
-  z-index: 5000;
-
-  position:absolute;
-  top:0;
-  opacity: 0;
-
-}
-
-
-/* 버튼 hover */
-.main>.chart_art>.art_body>.button>.next:hover{
-  display: block;
-  
-  opacity: 1;
-  
-}
-.main>.chart_art>.art_body>.button>.prev:hover{
-  display: block;
-  opacity: 1;
-
-} 
 
 
 
