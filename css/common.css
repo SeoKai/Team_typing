@@ -1,10 +1,10 @@
 /* 나눔고딕 폰트 설정 */
-@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 
 /* 모든 요소에 박스 모델과 나눔고딕 폰트 적용 */
 * {
   box-sizing: border-box;
-  font-family: "Nanum Gothic";
+  font-family: 'Nanum Gothic';
 }
 
 /* 배경색 설정과 기본 여백 제거 */
@@ -32,8 +32,8 @@ a {
 .wrapper {
   display: grid;
   grid-template-areas:
-    "aside header" /* 첫 번째 행: 사이드바와 헤더 */
-    "aside main"; /* 두 번째 행: 사이드바와 메인 */
+    'aside header' /* 첫 번째 행: 사이드바와 헤더 */
+    'aside main'; /* 두 번째 행: 사이드바와 메인 */
   height: 100vh;
   grid-template-columns: 260px auto; /* 열 너비 설정 */
   grid-template-rows: 54px auto; /* 행 높이 설정 */
@@ -172,7 +172,7 @@ a {
 }
 
 /* 사운드 바 스타일링 */
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none; /*WebKit*/
   -moz-appearance: none; /* Firefox */
   appearance: none; /* 표준 속성 */
@@ -187,12 +187,12 @@ input[type="range"] {
 }
 
 /* 호버 시 사운드 바 효과 */
-input[type="range"]:hover {
+input[type='range']:hover {
   opacity: 1;
 }
 
 /* 사운드 바의 슬라이더(thumb) 스타일 */
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none; /* 기본 슬라이더 스타일 제거 */
   appearance: none;
   width: 15px;
@@ -205,7 +205,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* 슬라이더가 활성화되었을 때 스타일 */
-input[type="range"]::-webkit-slider-thumb:active {
+input[type='range']::-webkit-slider-thumb:active {
   background: #ffb398;
 }
 
@@ -544,4 +544,48 @@ h2 {
 
 .section-main:hover .slider-btn {
   display: block; /* 마우스가 섹션에 올라가면 버튼 보이기 */
+}
+
+.track-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.track-list {
+  padding: 0;
+  margin: 0;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: pink;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.track img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.track-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.artist {
+  font-size: 14px;
+  color: #000000;
 }
