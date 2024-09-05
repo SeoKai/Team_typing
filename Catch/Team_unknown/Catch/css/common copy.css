@@ -646,29 +646,44 @@ input[type='range']::-webkit-slider-thumb:active {
   align-items: center;
 
   /* background-color:  orange; */
-  overflow-y: scroll;
+  overflow: hidden;
+
+  z-index: 15;
+
+}
+.main>.chart_art>.art_body>label{
+  /* display: none; */
+  z-index: 50;
+  /* display: none; */
+
 }
 
 .main>.chart_art>.art_body>.left{
-  width: 40px;
+  width: 5%;
   height: 100%;
   position: absolute;
   left:0;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
+  /* background-color: red; */
   cursor: pointer;
-  
+  z-index: 100;
+  /* display: none; */
+  opacity: 0;
 }
 
-
+.main>.chart_art>.art_body>.left:hover{
+  display: block;
+  opacity: 1;
+  background-color: #33333337;
+}
 
 .main>.chart_art>.art_body>.right{
-  width:40px;
-  height: 200%;
+  width:5%;
+  height: 100%;
   position: absolute;
   right:0;
   border: 1px solid yellow;
   cursor: pointer;
-  z-index: 5000;
 }
 
 .main>.chart_art>.art_body>input[type='radio']{
@@ -677,6 +692,7 @@ input[type='range']::-webkit-slider-thumb:active {
 
 .main>.chart_art>.art_body>input[type='radio']#next:checked~.over_body{
   left:-100%;
+  
 }
 .main>.chart_art>.art_body>input[type='radio']#prev:checked~.over_body{
   left:0;
