@@ -16,6 +16,12 @@
     </style>
     <!-- css -->
     <link rel="stylesheet" href="../css/common.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
 
   <!-- header 기본 구조   : width 100% 기준, 약간의 간격 제외하고 모두 너비 % -> 반응형
@@ -146,24 +152,24 @@
               <!-- 이미지를 슬라이드하는 컨테이너 -->
               <div class="slider-container" id="slider-container1">
                 <div class="item">
-                  <img src="../img/로고고양이.png" alt="이미지" />
+                  <img src="../img/sample.webp" alt="이미지" />
                   <div class="item-info">
-                    <div class="song-title"><span>로고고양이</span></div>
-                    <div class="song-sub"><span>캐치</span></div>
+                    <div class="song-title"><span>Rewrite - EP</span></div>
+                    <div class="song-sub"><span>예린</span></div>
                   </div>
                 </div>
                 <div class="item">
-                  <img src="../img/로고고양이.png" alt="이미지" />
+                  <img src="../img/sample2.webp" alt="이미지" />
                   <div class="item-info">
-                    <div class="song-title"><span>로고고양이</span></div>
-                    <div class="song-sub"><span>캐치</span></div>
+                    <div class="song-title"><span>Band Aid</span></div>
+                    <div class="song-sub"><span>데이식스</span></div>
                   </div>
                 </div>
                 <div class="item">
-                  <img src="../img/로고고양이.png" alt="이미지" />
+                  <img src="../img/sample3.webp" alt="이미지" />
                   <div class="item-info">
-                    <div class="song-title"><span>로고고양이</span></div>
-                    <div class="song-sub"><span>캐치</span></div>
+                    <div class="song-title"><span>clover #1 - EP</span></div>
+                    <div class="song-sub"><span>보라미유</span></div>
                   </div>
                 </div>
                 <div class="item">
@@ -461,9 +467,32 @@
               </button>
             </div>
           </div>
+          <!-- 세 번째 섹션 -->
+          <div class="section" id="section3">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <script src="../js/main1.js"></script>
+    <script src="../js/mainSlider.js"></script>
+    <script src="../js/swiper.js"></script>
   </body>
 </html>
