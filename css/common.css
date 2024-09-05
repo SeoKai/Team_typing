@@ -7,6 +7,11 @@
   font-family: "Nanum Gothic";
 }
 
+span:focus,
+img:focus {
+  outline: none; /* 포커스 시 외곽선 제거 */
+}
+
 /* 배경색 설정과 기본 여백 제거 */
 body {
   background-color: hsl(0, 0%, 100%);
@@ -446,7 +451,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .main-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+
   padding: 20px;
   margin: 0 auto;
   max-width: 1920px;
@@ -458,9 +463,9 @@ h2 {
 }
 
 /* 섹션 설정 */
-.section {
+#section1 {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 0px 20px;
   position: relative;
 }
 
@@ -476,7 +481,7 @@ h2 {
 }
 
 /* 슬라이드 컨테이너 설정 */
-.slider-container {
+#slider-container1 {
   height: 100%;
   display: flex;
   gap: 20px;
@@ -486,18 +491,19 @@ h2 {
 }
 
 /* 아이템 박스 설정 */
-.slider-container .item {
+.item {
   flex: 0 0 calc(16.96% - 20px);
   box-sizing: border-box;
   border-radius: 5px;
-  background-color: rgb(253, 180, 180);
+  background-color: white(253, 180, 180);
 }
 
 /* 아이템 이미지 설정 */
-.slider-container .item img {
+.item img {
   width: 100%;
   height: auto;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* 노래 정보 */
@@ -526,8 +532,9 @@ h2 {
   /* 반투명 색 */
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  border: none;
+  /* border: none; */
   height: 100%;
+  border: none;
   cursor: pointer;
   /* 버튼 숨김 */
   display: none;
@@ -544,4 +551,64 @@ h2 {
 
 .section-main:hover .slider-btn {
   display: block; /* 마우스가 섹션에 올라가면 버튼 보이기 */
+}
+
+.section-main:hover .slider-btn {
+  display: block; /* 마우스가 섹션에 올라가면 버튼 보이기 */
+}
+
+#section2 {
+  background-color: #ffffff;
+  padding: 0px 20px;
+  position: relative;
+}
+
+#slider-container2 {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  transition: transform 0.5s ease-in-out;
+}
+
+.track-list {
+  display: flex;
+  flex: 0 0 calc(25.268% - 20px);
+  flex-direction: column;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: pink;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.track img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+.track-info {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.track-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.artist {
+  font-size: 14px;
+  color: #000000;
 }
