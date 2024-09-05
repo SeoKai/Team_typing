@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -143,7 +144,7 @@
           <div class="section" id="section1">
             <!-- 앨범 상세 사진 -->
             <div class="album-img">
-              <img src="../img/아이유.webp" alt="">
+              <img src="../img/아이유/아이유-LILAC.webp" alt="">
             </div>
             <!-- 앨범 상세 정보 -->
             <div class="album-info">
@@ -261,20 +262,237 @@
           <!-- 세 번째 섹션 : 아티스트의 다른 앨범-->
          <div class="section" id="section3">
             <!-- 아티스트로 연결 -->
-            <div><a href="">아티스트의 다른 앨범</a></div>
-            <ul>
-                <li>
-                  <a href=""><img src="../img/아이유1.png" alt=""></a>
-                </li>
-                <li>
-                  <a href=""><img src="../img/아이유2.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href=""><img src="../img/아이유3.jpg" alt=""></a>
-                </li>
-            </ul>
-         </div>
+            <div class="section-title"><a href="">아티스트의 다른 앨범</a></div>
+            <div class="section-main">
+              <button class="material-symbols-outlined" id="back">arrow_back_ios</button>
+              <ul class="slider1" style="display: flex;">
+                  <li>
+                    <a href=""><img src="../img/아이유/아이유-Mordern Times.webp" alt=""></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/아이유/아이유-Palette.webp" alt=""></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/아이유/아이유-Real+.webp" alt=""></a>
+                  </li>      
+              </ul>
 
+              <ul class="slider2" style="display: none;">
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-Real.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-strawberry moon.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-The Winning.webp" alt=""></a>
+                </li>
+              </ul>
+
+              <ul class="slider3" style="display: none;">
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-Growing up.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-IU...IM.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-Last Fantasy.webp" alt=""></a>
+                </li>
+              </ul>
+          
+              <ul class="slider4" style="display: none;">
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-Mordern Times Epilogue.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-Lost And Found.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-Love Poem.webp" alt=""></a>
+                </li>
+              </ul>
+
+              <ul class="slider5" style="display: none;">
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-꽃갈피.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-마음.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-봄 사랑 벚꽃 말고.webp" alt=""></a>
+                </li>
+              </ul>
+
+              <ul class="slider6" style="display: none;">
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-삐삐.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-소격동.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-스무 살의 봄.webp" alt=""></a>
+                </li>
+              </ul>
+
+              <ul class="slider7" style="display: none;">
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-에잇.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-잔소리.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-조각집.webp" alt=""></a>
+                </li>
+              </ul>
+
+              <ul class="slider8" style="display: none;">
+                <li>
+                  <a href=""><img src="../img/아이유/아이유-첫 겨울이니까.webp" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/로고고양이.png" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="../img/로고고양이.png" alt=""></a>
+                </li>
+              </ul>
+
+              <button class="material-symbols-outlined" id="forward">arrow_forward_ios</button>
+            </div>
+            
+            <script>
+              let n = 1;
+              let slider1 = document.querySelector('.slider1')
+              let slider2 = document.querySelector('.slider2')
+              let slider3 = document.querySelector('.slider3')
+              let slider4 = document.querySelector('.slider4')
+              let slider5 = document.querySelector('.slider5')
+              let slider6 = document.querySelector('.slider6')
+              let slider7 = document.querySelector('.slider7')
+              let slider8 = document.querySelector('.slider8')
+
+              function s1() {
+                slider1.setAttribute('style', 'display: flex')
+                slider2.setAttribute('style', 'display: none')
+              }
+              function s2() {
+                slider1.setAttribute('style', 'display: none')
+                slider2.setAttribute('style', 'display: flex')
+                slider3.setAttribute('style', 'display: none')
+              }
+              function s3() {
+                slider2.setAttribute('style', 'display: none')
+                slider3.setAttribute('style', 'display: flex')
+                slider4.setAttribute('style', 'display: none')
+              }
+              function s4() {
+                slider3.setAttribute('style', 'display: none')
+                slider4.setAttribute('style', 'display: flex')
+                slider5.setAttribute('style', 'display: none')
+              }
+              function s5() {
+                slider4.setAttribute('style', 'display: none')
+                slider5.setAttribute('style', 'display: flex')
+                slider6.setAttribute('style', 'display: none')
+              }
+              function s6() {
+                slider5.setAttribute('style', 'display: none')
+                slider6.setAttribute('style', 'display: flex')
+                slider7.setAttribute('style', 'display: none')
+              }
+              function s7() {
+                slider6.setAttribute('style', 'display: none')
+                slider7.setAttribute('style', 'display: flex')
+                slider8.setAttribute('style', 'display: none')
+              }
+              function s8() {
+                slider7.setAttribute('style', 'display: none')
+                slider8.setAttribute('style', 'display: flex')
+              }
+
+              // 호버링
+              const main = document.querySelector('.section-main')
+              let forward = document.querySelector('#forward')
+              let back = document.querySelector('#back')
+
+              main.addEventListener('mouseover', () =>{
+                if (n>1 && n < 8) {
+                  forward.setAttribute('style', 'opacity: 1; cursor: pointer')
+                  back.setAttribute('style', 'opacity: 1; cursor: pointer')
+                }
+                else if (n == 1)
+                  forward.setAttribute('style', 'opacity: 1; cursor: pointer')
+                else if (n == 8)
+                  back.setAttribute('style', 'opacity: 1; cursor: pointer')
+              })
+              
+              main.addEventListener('mouseleave', () =>{
+                forward.setAttribute('style', 'opacity: 0;')
+                back.setAttribute('style', 'opacity: 0;')
+              })
+              
+              // 앞으로 이동
+              forward.addEventListener('click', () => {
+                if (n < 8)
+                  n++;
+                if (n == 2) {
+                  s2()
+                  back.setAttribute('style', 'opacity: 1; cursor: pointer')
+                }
+                else if (n == 3) 
+                  s3()
+                else if (n == 4) 
+                  s4()
+                else if (n == 5) 
+                  s5()
+                else if (n == 6) 
+                  s6()
+                else if (n == 7) 
+                  s7()
+                else if (n == 8) {
+                  s8()
+                  forward.setAttribute('style', 'opacity: 0')
+                }
+              })
+              
+              // 뒤로 이동
+              back.addEventListener('mouseover', () =>{
+                if (n>1 && n < 9)
+                  back.setAttribute('style', 'opacity: 1; cursor: pointer')
+                else
+                  back.setAttribute('style', 'opacity: 0')
+              })
+              back.addEventListener('mouseleave', () =>{
+                back.setAttribute('style', 'opacity: 0')
+              })
+              back.addEventListener('click', () => {
+                if (n > 1)
+                  n--;
+                if (n == 1) { 
+                  s1()
+                  back.setAttribute('style', 'opacity: 0')
+                }
+                else if (n == 2)
+                  s2();
+                else if (n == 3)
+                  s3();
+                else if (n == 4) 
+                  s4()
+                else if (n == 5) 
+                  s5()
+                else if (n == 6) 
+                  s6()
+                else if (n == 7) {
+                  s7()
+                  forward.setAttribute('style', 'opacity: 1; cursor: pointer')
+                }
+              })
+            </script>
+         </div>
 
           <!-- 네 번째 섹션 : 유사 장르-->
          <div class="section" id="section4">
@@ -351,7 +569,7 @@
             <li><a href=""><img src="../img/트와이스.jpg" alt=""></a></li>
             <li><a href=""><img src="../img/소녀시대.webp" alt=""></a></li>
             <li><a href=""><img src="../img/레드벨벳.webp" alt=""></a></li>
-            <li><a href=""><img src="../img/아이브.webp" alt=""></a></li>
+            <li><a href=""><img src="../img/백예린-선물.webp" alt=""></a></li>
             <li><a href=""><img src="../img/뉴진스.jpg" alt=""></a></li>
           </ul>
          </div>
