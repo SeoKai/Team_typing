@@ -13,6 +13,7 @@ img:focus {
 }
 
 /* 배경색 설정과 기본 여백 제거 */
+
 body {
   background-color: hsl(0, 0%, 100%);
   margin: 0;
@@ -444,18 +445,16 @@ input[type="range"]::-webkit-slider-thumb:active {
 /* 메인 콘텐츠 영역 설정 */
 .main {
   grid-area: main;
-  background-color: whitesmoke;
-}
-
-/* 메인 컨테이너 설정 */
-.main-container {
+  background-color: white
   display: flex;
   flex-direction: column;
 
-  padding: 20px;
+  padding: 0 20px;
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 1620px;
 }
+
+/* 메인 컨테이너 설정 */
 
 h2 {
   font-weight: bold;
@@ -463,7 +462,6 @@ h2 {
 
 /* 섹션 설정 */
 #section1 {
-  background-color: #ffffff;
   padding: 0px 20px;
   position: relative;
 }
@@ -559,7 +557,6 @@ h2 {
 }
 
 #section2 {
-  background-color: #ffffff;
   padding: 0px 20px;
   position: relative;
 }
@@ -569,13 +566,13 @@ h2 {
   display: flex;
   gap: 20px;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: c;
   transition: transform 0.5s ease-in-out;
 }
 
 .track-list {
   display: flex;
-  flex: 0 0 calc(25.268% - 20px);
+  flex: 0 0 calc(25.33% - 20px);
   flex-direction: column;
 }
 
@@ -615,11 +612,47 @@ h2 {
   color: #000000;
 }
 
+/* 섹션 설정 */
 #section3 {
-  display: flex;
+  padding: 0px 20px;
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .swiper {
   width: 100%;
-  height: 500px;
+}
+.swiper-slide {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide-content {
+  width: 100%;
+  text-align: center;
+}
+.slide-content img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.slide-content h3 {
+  margin: 10px 0;
+}
+.slide-content p {
+  color: #666;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }

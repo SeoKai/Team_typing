@@ -16,6 +16,7 @@
     </style>
     <!-- css -->
     <link rel="stylesheet" href="../css/common.css" />
+    <!-- Swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -23,15 +24,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
-
-  <!-- header 기본 구조   : width 100% 기준, 약간의 간격 제외하고 모두 너비 % -> 반응형
-.wrapper>.header>.header-bar 안에 
-.left>play-btn : 플레이어
-.center>song-info   : 음악 정보
-.center>song-sound  : 음량 조절
-.right>upload       : 업로드
-.right>login        : 로그인
--->
 
   <body>
     <div class="wrapper">
@@ -217,8 +209,6 @@
               </button>
             </div>
           </div>
-
-          <!-- 두 번째 섹션 -->
           <div class="section" id="section2">
             <div class="section-header" id="section-head2">
               <h2>지금 인기 있는 곡</h2>
@@ -467,26 +457,76 @@
               </button>
             </div>
           </div>
-          <!-- 세 번째 섹션 -->
           <div class="section" id="section3">
-            <!-- Slider main container -->
+            <div class="section-header" id="section-head3">
+              <h2>추천 플레이리스트</h2>
+            </div>
             <div class="swiper">
-              <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <img src="../img/swiperSample1.webp" alt="Today's Hits" />
+                    <h3>Today's Hits</h3>
+                    <p>
+                      가슴을 두근거리게 하는 베이스 리듬! RIIZE의 'Boom Boom
+                      Bass'.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <img src="../img/swiperSample2.webp" alt="Today's Hits" />
+                    <h3>Today's Hits</h3>
+                    <p>
+                      가슴을 두근거리게 하는 베이스 리듬! RIIZE의 'Boom Boom
+                      Bass'.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <img src="../img/swiperSample3.webp" alt="Today's Hits" />
+                    <h3>Today's Hits</h3>
+                    <p>
+                      가슴을 두근거리게 하는 베이스 리듬! RIIZE의 'Boom Boom
+                      Bass'.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <img src="../img/swiperSample4.webp" alt="Today's Hits" />
+                    <h3>Today's Hits</h3>
+                    <p>
+                      가슴을 두근거리게 하는 베이스 리듬! RIIZE의 'Boom Boom
+                      Bass'.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <img src="../img/swiperSample5.webp" alt="Today's Hits" />
+                    <h3>Today's Hits</h3>
+                    <p>
+                      가슴을 두근거리게 하는 베이스 리듬! RIIZE의 'Boom Boom
+                      Bass'.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide-content">
+                    <img src="../img/swiperSample6.webp" alt="Today's Hits" />
+                    <h3>Today's Hits</h3>
+                    <p>
+                      가슴을 두근거리게 하는 베이스 리듬! RIIZE의 'Boom Boom
+                      Bass'.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-
-              <!-- If we need navigation buttons -->
+              <!-- 네비게이션 버튼 -->
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
-
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>
             </div>
           </div>
         </div>
