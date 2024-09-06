@@ -1,10 +1,10 @@
 /* 나눔고딕 폰트 설정 */
-@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 
 /* 모든 요소에 박스 모델과 나눔고딕 폰트 적용 */
 * {
   box-sizing: border-box;
-  font-family: "Nanum Gothic";
+  font-family: 'Nanum Gothic';
 }
 
 span:focus,
@@ -38,11 +38,12 @@ a {
 .wrapper {
   display: grid;
   grid-template-areas:
-    "aside header" /* 첫 번째 행: 사이드바와 헤더 */
-    "aside main"; /* 두 번째 행: 사이드바와 메인 */
+    'aside header' /* 첫 번째 행: 사이드바와 헤더 */
+    'aside main' /* 두 번째 행: 사이드바와 메인 */
+    'aside footer';
   height: 100vh;
   grid-template-columns: 260px auto; /* 열 너비 설정 */
-  grid-template-rows: 54px auto; /* 행 높이 설정 */
+  grid-template-rows: 54px auto 300px; /* 행 높이 설정 */
 }
 
 /* 헤더 스타일 설정 */
@@ -55,6 +56,9 @@ a {
   align-items: center;
   justify-content: center;
   padding: 0 20px;
+  padding-left: 260px;
+  position: fixed;
+  z-index: 100;
 }
 
 /* 헤더 바의 레이아웃과 정렬 설정 */
@@ -178,7 +182,7 @@ a {
 }
 
 /* 사운드 바 스타일링 */
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none; /*WebKit*/
   -moz-appearance: none; /* Firefox */
   appearance: none; /* 표준 속성 */
@@ -193,12 +197,12 @@ input[type="range"] {
 }
 
 /* 호버 시 사운드 바 효과 */
-input[type="range"]:hover {
+input[type='range']:hover {
   opacity: 1;
 }
 
 /* 사운드 바의 슬라이더(thumb) 스타일 */
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none; /* 기본 슬라이더 스타일 제거 */
   appearance: none;
   width: 15px;
@@ -211,7 +215,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* 슬라이더가 활성화되었을 때 스타일 */
-input[type="range"]::-webkit-slider-thumb:active {
+input[type='range']::-webkit-slider-thumb:active {
   background: #ffb398;
 }
 
@@ -320,10 +324,11 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 /* 사이드바 스타일 설정 */
 .aside {
-  position: relative;
+  position: fixed;
   grid-area: aside;
   height: 100%;
   background-color: #ffc9b6;
+  z-index: 101;
 }
 
 /* 로고 영역 설정 */
@@ -445,10 +450,9 @@ input[type="range"]::-webkit-slider-thumb:active {
 /* 메인 콘텐츠 영역 설정 */
 .main {
   grid-area: main;
-  background-color: white
+  background-color: white;
   display: flex;
   flex-direction: column;
-
   padding: 0 20px;
   margin: 0 auto;
   max-width: 1620px;
