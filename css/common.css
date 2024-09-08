@@ -5,6 +5,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Nanum Gothic';
+  user-select: none; /* 모든 요소에서 텍스트 선택 방지 */
 }
 
 span:focus,
@@ -498,7 +499,7 @@ h2 {
   flex: 0 0 calc(16.9% - 20px);
   box-sizing: border-box;
   border-radius: 5px;
-  background-color: white(253, 180, 180);
+  background-color: white;
 }
 
 /* 아이템 이미지 설정 */
@@ -536,13 +537,10 @@ h2 {
   /* 수직 중앙 배치 */
   top: 50%;
   transform: translateY(-50%);
-  /* 반투명 색 */
-  background-color: rgb(255, 179, 152, 0.5);
-  color: rgba(1, 1, 1, 0.5);
-  /* border: none; */
-  height: 20%;
-  border: 2px solid rgb(163, 163, 163, 0.5);
-
+  background-color: white;
+  color: #ffb398;
+  height: 100%;
+  border: none;
   cursor: pointer;
   /* 버튼 숨김 */
   display: none;
@@ -550,18 +548,18 @@ h2 {
 }
 
 .slider-btn.left {
-  left: 3px;
+  left: -20px;
 }
 
 .slider-btn.right {
-  right: 3px;
+  right: -20px;
 }
 
-.section-main:hover .slider-btn {
+.section:hover .slider-btn {
   display: block; /* 마우스가 섹션에 올라가면 버튼 보이기 */
 }
 
-.section-main:hover .slider-btn {
+.section:hover .slider-btn {
   display: block; /* 마우스가 섹션에 올라가면 버튼 보이기 */
 }
 
@@ -630,7 +628,22 @@ h2 {
   flex: 0 0 calc(33.7% - 20px);
   box-sizing: border-box;
   border-radius: 5px;
-  background-color: white(253, 180, 180);
+  background-color: white;
+}
+
+@media (max-width: 1400px) {
+  .sec3-item {
+    flex: 0 0 calc(51% - 20px);
+  }
+  .track-list {
+    flex: 0 0 calc(33.6% - 20px);
+  }
+  .item {
+    flex: 0 0 calc(25.4% - 20px);
+  }
+  .footer-letf {
+    display: none;
+  }
 }
 
 /* 아이템 이미지 설정 */
@@ -681,6 +694,14 @@ h2 {
 }
 
 #section4 {
+  padding: 0px 20px;
+  position: relative;
+}
+#section5 {
+  padding: 0px 20px;
+  position: relative;
+}
+#section6 {
   padding: 0px 20px;
   position: relative;
 }
@@ -750,11 +771,9 @@ h2 {
   width: 150px;
   height: 150px;
   margin-right: 10px;
-  background-color: white;
 }
 
 .logo2 {
   width: 300px;
   height: 100px;
-  background-color: white;
 }
