@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="../../upload/css/01_v01submain2.css" />
+  </head>
+  <body>
+    <div class="up_login">
+      <div class="up_login_top">
+        <a href="../../main/html/index.html"
+          ><img src="../img/logo_2.png" alt=""
+        /></a>
+
+        <form action="">
+          <!-- 로그인 id -->
+          <div class="up_login_id">
+            <label for="up_id">Email</label>
+            <br />
+            <input type="text" id="up_id" autofocus placeholder="your Email" />
+          </div>
+          <!-- 로그인 패스워드 -->
+          <div class="up_iogin_pass">
+            <label for="up_pass">password</label>
+            <br />
+            <input
+              type="text"
+              id="up_pass"
+              autofocus
+              placeholder="your Password"
+            />
+          </div>
+          <!--  ID  체크박스-->
+          <div class="up_check-id">
+            <input id="up_check-id" type="checkbox" />
+            <label for="up_check-id"
+              ><span class="up_check-id__checkbox"></span>Remember ID</label
+            >
+          </div>
+          <!-- 로그이 버튼 -->
+          <div class="up_login__btn">
+            <button class="up_login__btn_1" onclick="login()">Log in</button>
+          </div>
+        </form>
+        <!-- 페스워드 찾기 -->
+        <div class="up_direction">
+          <p class="up_forgot-pw">Forgot <a href="#none">Password?</a></p>
+          <p class="sign-up">
+            Don't have an account? <a href="#none">Sign up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const toMain = document.querySelector(".up_login__btn_1");
+
+      if (toMain) {
+        toMain.addEventListener("click", (event) => {
+          event.preventDefault();
+          window.location.href = "../../main/html/index.html";
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,506 @@
+*{
+    box-sizing: border-box;
+   
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.main{
+  
+
+    /* overflow: scroll; */
+    margin: 0 20px; 
+    padding: 0 20px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 업로드페이지  헤더 영역  */
+.main>.up-top-header{
+    
+    width: 100%; height: 160px;
+    display: flex;
+
+
+   margin-top: 20px;
+
+}
+.main>.up-top-header>.up-logo{
+    
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+
+}
+.main>.up-top-header>div>img{
+   width: 100%; height: 160px;
+   object-fit: contain;
+}
+
+
+/* 메인 업로드 영역 (입력) */
+.main>.up-main{}
+.main>.up-main>.up-main-1{
+
+}
+.main>.up-main>.up-main-1>p{
+    width: 90%;
+    text-align: right; 
+    margin: 0 0 10px; 
+    
+}
+
+.main>.up-main>.up-main-1>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.main>.up-main>.up-main-1>li>input{
+    width: 80%; height: 30px;
+    display: flex;
+    text-align: left;
+
+    background-color: rgb(235, 235, 235);
+}
+
+/* 메인 업로드 영역  */
+
+.main>.up-main>.up-main-2{
+    width: 100%; height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+   margin-top: 5px;
+   
+}
+.main>.up-main>.up-main-2>.up-fileAdd{
+    width: 80%; height: 500px;
+    display:block;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #929292;
+   
+}
+.main>.up-main>.up-main-2>.up-fileAdd{
+
+}
+
+.main>.up-main>.up-main-2>.up-fileAdd>h1{
+    width: 100%; height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    background-color: #929292;
+    color: #e9ebf0;
+    font-size: 26px;
+
+}
+.main>.up-main>.up-main-2>.up-fileAdd>h2{
+    width: 100%; height: 40px;
+    background-color: #b2b0b0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main>.up-main>.up-main-2>.up-fileAdd>h2>button{
+    width: 120px; height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    
+}
+.main>.up-main>.up-main-2>.up-fileAdd>h3{
+ width: 100%; height: 280px;
+ display:flex;
+ justify-content: center; 
+ align-items: center;
+ background-color: white;
+
+ text-align: center;
+ margin: 0;
+}
+.main>.up-main>.up-main-2>.up-fileAdd>h3:active:hover{
+ background-color: #e9e9e9;
+}
+
+
+.main>.up-main>.up-main-2>.up-fileAdd>h3>img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px; height: 120px;
+   
+   
+}
+.main>.up-main>.up-main-2>.up-fileAdd>h3>p{
+  margin: 10px;
+  
+ 
+}
+
+@media (max-width: 800px){
+    .main>.up-main>.up-main-2>.up-fileAdd>h3>p{
+        display: none;
+    }
+}
+.main>.up-main>.up-main-2>.up-fileAdd>h4{
+    width: 100%; height: 100px;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2b0b0;
+   
+    margin: 0;
+} 
+
+.main>.up-main>.up-main-2>.up-fileAdd>h4>li{
+    width: 100%;
+    padding: 4px 10px 0px;
+    vertical-align: middle;
+}
+@media (max-width: 1150px){
+    .main>.up-main>.up-main-2>.up-fileAdd>h4>li{
+        display: none;
+    }
+}
+
+
+
+/* <!-- 메인 업로드 파일등록 영역--> */
+.main>.up-registration{
+
+}
+.main>.up-registration>.up-registration-1{
+ width: 100%; height: 220px;
+
+ display: flex;
+ justify-content: center;
+ text-align: center;
+
+ margin: 60px 0 10px;
+}
+
+.main>.up-registration>.up-registration-1>article{
+ width:80%; height: 220px;
+ display: flex;
+ justify-content: center;
+ text-align: left;
+ white-space :none;
+ 
+
+ font-size: 20px;
+ 
+}
+.main>.up-registration>.up-registration-1>article>.up-registration{
+   
+ }
+.main>.up-registration>.up-registration-1>article>.up-registration-file{
+    display:flex;
+    justify-content:start;
+    
+    float: right;
+  
+   width: 100%; height: 220px;
+   background-color:none;
+}
+
+
+
+.main>.up-registration>.up-registration-1>article>.up-registration-file>.registration-part-1{
+ display: inline block;
+background: none;
+width: 100px; height: 220px;
+margin:0;
+
+}
+@media (max-width: 1150px){
+    .main>.up-registration>.up-registration-1>article>.up-registration-file>.registration-part-1{
+        display: none;
+    }
+}
+
+
+
+
+
+.main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2{
+    display: flex;
+
+   background-color: #f6f3f3;
+   border: 2px solid gray;
+
+   width: 100%; height: 220px;
+   margin:0;
+}
+.main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbdada;
+
+    border: 2px solid gray;
+    width: 200px; height: 200px;
+    margin: 10px 10px 10px 10px;
+}
+
+
+
+.main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2>img{
+    width: 100px;height: 100px;
+    display: flex;
+    
+    margin: 0 auto;   
+}
+
+
+
+
+.main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2>.up-p{
+    font-size: 15px;
+    font-weight: 50px;
+    color: #929292;
+}
+.main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2>p{
+    
+    text-align: center;
+    
+    font-size: 9px;
+
+    color: #929292;
+}
+@media (max-width: 1150px){
+    .main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2>p {
+        display: none;
+    }
+}
+
+
+
+
+ .main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2-1{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color:none;
+
+    width: 100%; height: 200px;
+    margin: 10px 10px 10px 10px;
+
+}
+
+
+
+main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2-1>.registration-part-3>.q2{
+    width: 100px;height: 100px;
+    
+    background-color: #000;
+}
+.main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2-1>.registration-part-3>.q2>span{
+    
+    white-space: none;
+
+    align-items:flex-end;
+    text-align-last: right;
+    font-size: 13px;
+}
+.main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2-1>.registration-part-3>.q2>.part-3{
+    color: red;
+} 
+
+
+
+
+
+
+.main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2-1>.registration-part-3>.registration-part-4{
+    display: block;
+    background-color: #cfcccb;
+    margin-top: 0;
+
+    border-radius: 5px;
+    border: 2px solid gray;
+    width: 100%; height: 150px;
+}
+
+
+@media (max-width: 1150px){
+    .main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2-1>.registration-part-3>.registration-part-4{
+        display: none;
+    }
+}
+
+
+
+
+.main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2-1>.registration-part-3>.registration-part-4>span{
+    padding: 0 0 0 15px;
+    font-size: 15px;
+
+}
+.main>.up-registration>.up-registration-1>article>.up-registration-file>.up-registration-file-2>.registration-part-2-1>.registration-part-3>.registration-part-4>.part-4{
+    color: #929292;
+}
+
+
+
+
+/* 하단 버튼 영역 */
+.main>.up-registration>.up-but{
+    
+    width: 90%; height: 50px;
+    text-align: right; 
+          
+}
+/* 모달 팝업 */
+
+
+
+/* 풋터 영역 */
+.up-footer{
+    margin-top: 20px;
+    width: 1250px;
+    height: 150px;
+   
+    
+}
+.up-footer>img{
+    width: 100%;
+    height: 150px;
+    z-index: 100px;
+}
+
+
+
+.up-footer>.sub-upload-footer{
+    
+    padding: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    z-index: 1000px;
+}
+.up-footer>.sub-upload-footer>.sub-upload-footer-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+/*   로그인  */
+
+.up_login{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+     
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    background-position: center;
+    background-size: cover;
+}
+
+.up_login>.up_login_top{
+    width: 250px;
+    height: 300px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: drop-shadow(0px 20px 30px #ffa8a2);
+    backdrop-filter: blur(25px);
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+
+    
+   
+}
+
+.up_login>.up_login_top>a>img{
+    width: 150px;height: 100px;
+}
+
+
+.up_login>.up_login_top>.up_login_id{
+    width: 360px;
+    height: 530px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 60px 60px 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+
+    
+}
+
+
+.up_login{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+     
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    background-position: center;
+    background-size: cover;
+}
+
+.up_login>.up_login_top{
+    width: 250px;
+    height: 300px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: drop-shadow(0px 20px 30px #ffa8a2);
+    backdrop-filter: blur(25px);
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+
+    
+   
+}
+
+.up_login>.up_login_top>img{
+    width: 150px;height: 100px;
+}
+
+
+.up_login>.up_login_top>.up_login_id{
+    width: 360px;
+    height: 530px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 60px 60px 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+
+    
+}
+
+.up_login>.up_login_top>.up_login__btn>button{
+   
+}
