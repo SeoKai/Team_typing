@@ -776,3 +776,9 @@ h2 {
   width: 300px;
   height: 100px;
 }
+
+/* a태그 클릭 이벤트 방지 */
+.disabled-link {
+  pointer-events: none;
+  color: gray; /* Optional: To indicate that the link is disabled */
+}

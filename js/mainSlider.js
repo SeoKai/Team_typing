@@ -50,40 +50,6 @@ function SliderFunctionality() {
       });
     }
 
-    // 드래그 이벤트
-    let isDragging = false;
-    let startX = 0;
-    let initialScrollAmount = 0;
-
-    sliderContent.addEventListener("mousedown", (e) => {
-      isDragging = true;
-      startX = e.pageX;
-      initialScrollAmount = scrollAmount; // 드래그 시작 시점의 스크롤 위치 저장
-      sliderContent.style.transition = "none";
-    });
-
-    sliderContent.addEventListener("mouseup", () => {
-      isDragging = false;
-      sliderContent.style.transition = "transform 0.5s ease";
-    });
-
-    sliderContent.addEventListener("mouseleave", () => {
-      isDragging = false; // 마우스가 슬라이드 밖으로 나가면 드래그 종료
-    });
-
-    sliderContent.addEventListener("mousemove", (e) => {
-      if (!isDragging) return;
-
-      const deltaX = e.pageX - startX;
-      const maxScroll = sliderContent.scrollWidth - sliderContent.clientWidth;
-      scrollAmount = initialScrollAmount - deltaX;
-
-      if (scrollAmount < 0) scrollAmount = 0;
-      if (scrollAmount > maxScroll) scrollAmount = maxScroll;
-
-      sliderContent.style.transform = `translateX(-${scrollAmount}px)`;
-    });
-
     // 화면 크기 변경 시 슬라이드 너비 재설정
     window.addEventListener("resize", () => {
       slideWidth = sliderContent.clientWidth; // 리사이즈될 때 슬라이드 너비 재설정
@@ -99,6 +65,9 @@ SliderFunctionality();
 // 이미지 드래그 방지
 document.querySelectorAll("img").forEach((img) => {
   img.setAttribute("draggable", "false");
+});
+document.querySelectorAll("a").forEach((a) => {
+  a.setAttribute("draggable", "false");
 });
 
 // 화면 크기 변경 시마다 슬라이드 기능 재적용
