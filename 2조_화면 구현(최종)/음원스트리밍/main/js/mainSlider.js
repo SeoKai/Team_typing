@@ -74,3 +74,12 @@ document.querySelectorAll("a").forEach((a) => {
 window.addEventListener("resize", () => {
   SliderFunctionality();
 });
+
+const search = document.querySelector('.sidebar>.search-box>input')
+
+search.addEventListener('keyup',(e)=>{
+    if(e.key === 'Enter'){
+        console.log('확인')
+        window.location.href = "../../search/html/search.html"
+    }
+})
