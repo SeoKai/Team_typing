@@ -1,3 +1,4 @@
+
 /* 섹션 스타일 */
 /* common.css에서 주석 처리 필요
    height, 
@@ -142,9 +143,8 @@
 .section:nth-child(2)>.song-list>li>.song-etc>a>span
 .section:nth-child(2)>.song-list>li>.song-etc>a>span{}
 
-.section:nth-child(2)>{
+.section:nth-child(2){
     height: auto;   width: 100%;
-    border-radius: 0px;
 }
 .section:nth-child(2)>.song-list{
     height: auto;    width: 100%;
@@ -472,6 +472,7 @@
   margin-top: 10px;
   height: auto; width: 100%;
   display: block;
+  margin-bottom: 50px;
 }
 .section:nth-child(6)>div{
   height: 10%; width: 100%;
