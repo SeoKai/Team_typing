@@ -44,7 +44,7 @@ a {
     "aside footer"; /* !!!추가된 부분 */
 
   grid-template-columns: 260px auto; /* 열 너비 설정 */
-  grid-template-rows: 54px auto /* !!!추가된 부분 */ 300px;
+  grid-template-rows: 54px auto /* !!!추가된 부분 */ 150px;
 }
 
 /* 헤더 스타일 설정 */
@@ -59,6 +59,7 @@ a {
   padding: 0 20px;
   padding-left: 260px;
   position: fixed;
+  border-bottom: 1px solid #dddddd;
   z-index: 100;
 }
 
@@ -331,6 +332,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   width: 260px; /* !!!추가된 부분 */
   background-color: #ffc9b6;
   z-index: 101;
+  border-right: 1px solid #dddddd;
 }
 
 /* 로고 영역 설정 */
@@ -340,7 +342,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   align-items: center;
   margin-bottom: 20px;
   background-color: white;
-  border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid #dddddd;
 }
 .side-logo > img:nth-child(1) {
   width: 55px;
@@ -543,7 +545,6 @@ h2 {
   cursor: pointer;
   /* 버튼 숨김 */
   display: none;
-  z-index: 100;
 }
 
 .slider-btn.left {
@@ -716,26 +717,28 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #dddddd;
 }
 
 .footer-letf {
   position: absolute;
-  left: 20px;
-  bottom: 20px;
+  left: 10px;
+  bottom: 10px;
   color: #8b8b8b;
   font-size: 14px;
 }
 
 .footer-l-hi {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-l-hi > a {
-  color: #8b8b8b;
-  font-size: 18px;
+  color: #353535;
+  font-size: 14px;
+  font-weight: bold;
 }
 .footer-l-lo p {
-  color: white;
+  color: rgb(107, 107, 107);
   margin-bottom: 5px;
   line-height: 1.5;
 }
@@ -747,12 +750,12 @@ h2 {
 
 .footer-service li a {
   font-size: 12px;
-  color: white;
+  color: rgb(107, 107, 107);
 }
 
 .footer-service li::after {
   content: "|";
-  color: white;
+  color: rgb(133, 132, 132);
   margin-left: 5px;
 }
 
@@ -767,18 +770,12 @@ h2 {
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 110px;
+  height: 110px;
   margin-right: 10px;
 }
 
 .logo2 {
-  width: 300px;
-  height: 100px;
-}
-
-/* a태그 클릭 이벤트 방지 */
-.disabled-link {
-  pointer-events: none;
-  color: gray; /* Optional: To indicate that the link is disabled */
+  width: 200px;
+  height: 80px;
 }
