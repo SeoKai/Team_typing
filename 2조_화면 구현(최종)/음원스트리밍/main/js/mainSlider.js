@@ -75,11 +75,24 @@ window.addEventListener("resize", () => {
   SliderFunctionality();
 });
 
-const search = document.querySelector('.sidebar>.search-box>input')
+const search = document.querySelector(".sidebar>.search-box>input");
 
-search.addEventListener('keyup',(e)=>{
-    if(e.key === 'Enter'){
-        console.log('확인')
-        window.location.href = "../../search/html/search.html"
-    }
-})
+search.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    console.log("확인");
+    window.location.href = "../../search/html/search.html";
+  }
+});
+
+// 검색 실행 함수 정의
+function performSearch(url) {
+  const searchInput = document.getElementById("searchInput").value;
+  if (searchInput) {
+    window.location.href = url + "?q=" + encodeURIComponent(searchInput);
+  }
+}
+
+// 아이콘 클릭 시 검색 실행
+document.getElementById("searchIcon").addEventListener("click", function () {
+  performSearch("../../search/html/search.html");
+});

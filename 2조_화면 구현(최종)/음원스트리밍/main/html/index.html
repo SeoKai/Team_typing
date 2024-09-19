@@ -106,8 +106,10 @@
         <!-- 검색 박스 -->
         <div class="sidebar">
           <div class="search-box">
-            <span class="search-icon material-symbols-outlined">search</span>
-            <input type="text" placeholder="검색" />
+            <span class="search-icon material-symbols-outlined" id="searchIcon"
+              >search</span
+            >
+            <input type="text" id="searchInput" placeholder="검색" />
           </div>
           <!-- 메뉴 항목 -->
           <div class="menu">
@@ -120,10 +122,14 @@
                 >settings</span
               >설정</a
             >
-            <a href="../../user_info/html/myinfo.html" class="menu-item"
+            <a href="../../album/html/musicinfo.html" class="menu-item"
               ><span class="side-menu-icon material-symbols-outlined"
                 >lists</span
               >재생 목록</a
+            >
+            <a href="../../user_info/html/myinfo.html" class="menu-item"
+              ><span class="side-menu-icon material-symbols-outlined">info</span
+              >마이 페이지</a
             >
           </div>
           <!-- 고객 센터 -->
@@ -144,20 +150,14 @@
           <div class="section-main">
             <!-- 이미지를 슬라이드하는 컨테이너 -->
             <div class="slider-container">
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/sample.webp" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>Rewrite - EP</span></div>
                   <div class="song-sub"><span>예린</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/unnamed5.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -166,60 +166,42 @@
                   <div class="song-sub"><span>LUCY</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/sample3.webp" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>clover #1 - EP</span></div>
                   <div class="song-sub"><span>보라미유</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/unnamed.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>晩餐歌</span></div>
                   <div class="song-sub"><span>tuki.</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/unnamed1.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>순혈주의자</span></div>
                   <div class="song-sub"><span>달의하루</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/unnamed2.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>はいよろこんで</span></div>
                   <div class="song-sub"><span>Kocchi no Kento</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/unnamed3.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>LOSER</span></div>
                   <div class="song-sub"><span>Kenshi Yonezu</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/unnamed4.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>逆夢</span></div>
@@ -230,10 +212,14 @@
             <!-- 슬라이드 버튼 -->
             <div class="main-button">
               <button class="slider-btn left">
-                <span class="material-symbols-outlined">chevron_left</span>
+                <span class="material-symbols-outlined slider-icon"
+                  >chevron_left</span
+                >
               </button>
               <button class="slider-btn right">
-                <span class="material-symbols-outlined">chevron_right</span>
+                <span class="material-symbols-outlined slider-icon"
+                  >chevron_right</span
+                >
               </button>
             </div>
           </div>
@@ -247,10 +233,7 @@
               <ul class="track-list">
                 <!-- 첫 번째 트랙 -->
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb.webp" alt="" />
                     </div>
@@ -261,10 +244,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb1.webp" alt="" />
                     </div>
@@ -277,10 +257,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb2.webp" alt="" />
                     </div>
@@ -291,10 +268,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb3.webp" alt="" />
                     </div>
@@ -308,10 +282,7 @@
               <ul class="track-list">
                 <!-- 두 번째 트랙 -->
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb4.webp" alt="" />
                     </div>
@@ -322,10 +293,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb5.webp" alt="" />
                     </div>
@@ -336,10 +304,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb6.webp" alt="" />
                     </div>
@@ -352,10 +317,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb7.webp" alt="" />
                     </div>
@@ -369,10 +331,7 @@
               <ul class="track-list">
                 <!-- 세 번째 트랙 -->
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb8.webp" alt="" />
                     </div>
@@ -383,10 +342,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb9.webp" alt="" />
                     </div>
@@ -397,10 +353,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb10.webp" alt="" />
                     </div>
@@ -411,10 +364,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/48x48bb11.webp" alt="" />
                     </div>
@@ -428,10 +378,7 @@
               <ul class="track-list">
                 <!-- 네 번째 트랙 -->
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed.jpg" alt="" />
                     </div>
@@ -442,10 +389,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed1.jpg" alt="" />
                     </div>
@@ -456,10 +400,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed2.jpg" alt="" />
                     </div>
@@ -470,10 +411,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed3.jpg" alt="" />
                     </div>
@@ -486,10 +424,7 @@
               </ul>
               <ul class="track-list">
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed4.jpg" alt="" />
                     </div>
@@ -502,10 +437,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed5.jpg" alt="" />
                     </div>
@@ -516,10 +448,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed6.jpg" alt="" />
                     </div>
@@ -530,10 +459,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed7.jpg" alt="" />
                     </div>
@@ -546,10 +472,7 @@
               </ul>
               <ul class="track-list">
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed8.jpg" alt="" />
                     </div>
@@ -560,10 +483,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed9.jpg" alt="" />
                     </div>
@@ -576,10 +496,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed10.jpg" alt="" />
                     </div>
@@ -590,10 +507,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="../../album/html/musicinfo.html"
-                    class="track"
-                  >
+                  <a href="../../album/html/musicinfo.html" class="track">
                     <div class="track-img">
                       <img src="../img/track-img/unnamed11.jpg" alt="" />
                     </div>
@@ -606,10 +520,10 @@
               </ul>
             </div>
             <!-- 슬라이드 버튼 -->
-            <button class="slider-btn left">
+            <button class="slider-btn slider-btn2 left">
               <span class="material-symbols-outlined">chevron_left</span>
             </button>
-            <button class="slider-btn right">
+            <button class="slider-btn slider-btn2 right">
               <span class="material-symbols-outlined">chevron_right</span>
             </button>
           </div>
@@ -621,10 +535,7 @@
           <div class="section-main">
             <!-- 이미지를 슬라이드하는 컨테이너 -->
             <div class="slider-container">
-              <a
-                href="../../album/html/musicinfo.html"
-                class="sec3-item"
-              >
+              <a href="../../album/html/musicinfo.html" class="sec3-item">
                 <div class="slide-info">
                   <span class="s-info1">업데이트된 플레이리스트</span>
                   <span class="s-info2">주말의 K-Pop</span>
@@ -640,10 +551,7 @@
                   </div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="sec3-item"
-              >
+              <a href="../../album/html/musicinfo.html" class="sec3-item">
                 <div class="slide-info">
                   <span class="s-info1">최신 앨범</span>
                   <span class="s-info2">OUCH</span>
@@ -659,10 +567,7 @@
                   </div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="sec3-item"
-              >
+              <a href="../../album/html/musicinfo.html" class="sec3-item">
                 <div class="slide-info">
                   <span class="s-info1">업데이트된 플레이리스트</span>
                   <span class="s-info2">KPOPWRLD</span>
@@ -678,10 +583,7 @@
                   </div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="sec3-item"
-              >
+              <a href="../../album/html/musicinfo.html" class="sec3-item">
                 <div class="slide-info">
                   <span class="s-info1">추천 큐레이터</span>
                   <span class="s-info2">랩비트</span>
@@ -694,10 +596,7 @@
                   </div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="sec3-item"
-              >
+              <a href="../../album/html/musicinfo.html" class="sec3-item">
                 <div class="slide-info">
                   <span class="s-info1">공간 음향</span>
                   <span class="s-info2">공간 음향으로 듣기: K-Pop</span>
@@ -712,10 +611,7 @@
                   </div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="sec3-item"
-              >
+              <a href="../../album/html/musicinfo.html" class="sec3-item">
                 <div class="slide-info">
                   <span class="s-info1">업데이트된 플레이리스트</span>
                   <span class="s-info2">오늘의 히트곡</span>
@@ -734,11 +630,15 @@
             </div>
             <!-- 슬라이드 버튼 -->
             <div class="main-button">
-              <button class="slider-btn left">
-                <span class="material-symbols-outlined">chevron_left</span>
+              <button class="slider-btn slider-btn3 left">
+                <span class="material-symbols-outlined slider-icon"
+                  >chevron_left</span
+                >
               </button>
-              <button class="slider-btn right">
-                <span class="material-symbols-outlined">chevron_right</span>
+              <button class="slider-btn slider-btn3 right">
+                <span class="material-symbols-outlined slider-icon"
+                  >chevron_right</span
+                >
               </button>
             </div>
           </div>
@@ -750,20 +650,14 @@
           <div class="section-main">
             <!-- 이미지를 슬라이드하는 컨테이너 -->
             <div class="slider-container">
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed8.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>가짜 아이돌</span></div>
                   <div class="song-sub"><span>QWER</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed9.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -772,10 +666,7 @@
                   <div class="song-sub"><span>윈터 (WINTER)</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed10.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -784,30 +675,21 @@
                   <div class="song-sub"><span>Day6</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed11.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>태양물고기</span></div>
                   <div class="song-sub"><span>윤하</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed12.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>숲</span></div>
                   <div class="song-sub"><span>스탠딩 에그</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed13.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -816,10 +698,7 @@
                   <div class="song-sub"><span>Sam Smith,태연</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed14.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -828,10 +707,7 @@
                   <div class="song-sub"><span>NCT DREAM</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed15.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -859,30 +735,21 @@
           <div class="section-main">
             <!-- 이미지를 슬라이드하는 컨테이너 -->
             <div class="slider-container">
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>祝福</span></div>
                   <div class="song-sub"><span>YOASOBI</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed1.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>Rpg</span></div>
                   <div class="song-sub"><span>SEKAI NO OWARI </span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed2.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -891,30 +758,21 @@
                   <div class="song-sub"><span>sumika</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed3.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>言って。</span></div>
                   <div class="song-sub"><span>ヨルシカ</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed4.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>Lemon</span></div>
                   <div class="song-sub"><span>Kenshi Yonezu</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed5.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -923,10 +781,7 @@
                   <div class="song-sub"><span>Megan Thee Stallion</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed6.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -935,10 +790,7 @@
                   <div class="song-sub"><span>Creepy Nuts</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed7.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -966,30 +818,21 @@
           <div class="section-main">
             <!-- 이미지를 슬라이드하는 컨테이너 -->
             <div class="slider-container">
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed16.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>Idea 10</span></div>
                   <div class="song-sub"><span>Gibran Alcocer</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed17.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>Outta My Head</span></div>
                   <div class="song-sub"><span>THRDL!FE</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed18.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -998,30 +841,21 @@
                   <div class="song-sub"><span>송소희</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed19.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>NEVER LEAVE U</span></div>
                   <div class="song-sub"><span>THIRST</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed20.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title"><span>After Hours</span></div>
                   <div class="song-sub"><span>The Weeknd</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed21.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -1030,10 +864,7 @@
                   <div class="song-sub"><span>Shayne Ward</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed22.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
@@ -1042,10 +873,7 @@
                   <div class="song-sub"><span>d4vd</span></div>
                 </div>
               </a>
-              <a
-                href="../../album/html/musicinfo.html"
-                class="item"
-              >
+              <a href="../../album/html/musicinfo.html" class="item">
                 <img src="../img/j-pop/unnamed23.jpg" alt="이미지" />
                 <div class="item-info">
                   <div class="song-title">
