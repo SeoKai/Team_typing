@@ -1,10 +1,10 @@
-/* 나눔고딕 폰트 설정 */
-@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+/* 나눔고딕 폰라이드트 설정 */
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 
 /* 모든 요소에 박스 모델과 나눔고딕 폰트 적용 */
 * {
   box-sizing: border-box;
-  font-family: "Nanum Gothic";
+  font-family: 'Nanum Gothic';
   user-select: none; /* 모든 요소에서 텍스트 선택 방지 */
 }
 
@@ -39,9 +39,9 @@ a {
 .wrapper {
   display: grid;
   grid-template-areas:
-    "aside header" /* 첫 번째 행: 사이드바와 헤더 */
-    "aside main" /* 두 번째 행: 사이드바와 메인 */
-    "aside footer"; /* !!!추가된 부분 */
+    'aside header' /* 첫 번째 행: 사이드바와 헤더 */
+    'aside main' /* 두 번째 행: 사이드바와 메인 */
+    'aside footer'; /* !!!추가된 부분 */
 
   grid-template-columns: 260px auto; /* 열 너비 설정 */
   grid-template-rows: 54px auto /* !!!추가된 부분 */ 150px;
@@ -184,7 +184,7 @@ a {
 }
 
 /* 사운드 바 스타일링 */
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none; /*WebKit*/
   -moz-appearance: none; /* Firefox */
   appearance: none; /* 표준 속성 */
@@ -199,12 +199,12 @@ input[type="range"] {
 }
 
 /* 호버 시 사운드 바 효과 */
-input[type="range"]:hover {
+input[type='range']:hover {
   opacity: 1;
 }
 
 /* 사운드 바의 슬라이더(thumb) 스타일 */
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none; /* 기본 슬라이더 스타일 제거 */
   appearance: none;
   width: 15px;
@@ -217,7 +217,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* 슬라이더가 활성화되었을 때 스타일 */
-input[type="range"]::-webkit-slider-thumb:active {
+input[type='range']::-webkit-slider-thumb:active {
   background: #ffb398;
 }
 
@@ -546,7 +546,6 @@ h2 {
   color: #ffb398;
   height: 100%;
   border: none;
-  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -574,12 +573,17 @@ h2 {
   cursor: pointer;
 }
 
+.slider-icon {
+  font-size: 35px; /* 아이콘 크기 조정 */
+  color: #6a6a6a; /* 아이콘 색상 변경 (필요 시) */
+}
+
 .slider-btn.left {
-  left: -20px;
+  left: -30px;
 }
 
 .slider-btn.right {
-  right: -20px;
+  right: -30px;
 }
 
 #section2 {
@@ -773,13 +777,13 @@ h2 {
 }
 
 .footer-service li::after {
-  content: "|";
+  content: '|';
   color: rgb(133, 132, 132);
   margin-left: 5px;
 }
 
 .footer-service li:last-child::after {
-  content: "";
+  content: '';
 }
 
 .footer-right {

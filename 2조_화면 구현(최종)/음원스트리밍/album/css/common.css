@@ -1,4 +1,4 @@
-/* 나눔고딕 폰트 설정 */
+/* 나눔고딕 폰라이드트 설정 */
 @import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 
 /* 모든 요소에 박스 모델과 나눔고딕 폰트 적용 */
@@ -44,7 +44,7 @@ a {
     'aside footer'; /* !!!추가된 부분 */
 
   grid-template-columns: 260px auto; /* 열 너비 설정 */
-  grid-template-rows: 54px auto /* !!!추가된 부분 */ 300px;
+  grid-template-rows: 54px auto /* !!!추가된 부분 */ 150px;
 }
 
 /* 헤더 스타일 설정 */
@@ -59,6 +59,7 @@ a {
   padding: 0 20px;
   padding-left: 260px;
   position: fixed;
+  border-bottom: 1px solid #dddddd;
   z-index: 100;
 }
 
@@ -331,6 +332,7 @@ input[type='range']::-webkit-slider-thumb:active {
   width: 260px; /* !!!추가된 부분 */
   background-color: #ffc9b6;
   z-index: 101;
+  border-right: 1px solid #dddddd;
 }
 
 /* 로고 영역 설정 */
@@ -340,7 +342,7 @@ input[type='range']::-webkit-slider-thumb:active {
   align-items: center;
   margin-bottom: 20px;
   background-color: white;
-  border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid #dddddd;
 }
 .side-logo > img:nth-child(1) {
   width: 55px;
@@ -373,17 +375,20 @@ input[type='range']::-webkit-slider-thumb:active {
 /* 검색박스 입력 부분 설정 */
 .search-box input {
   width: 100%;
-  height: 32px;
+  height: 38px;
   padding: 5px 10px 5px 40px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #b3b3b3;
   outline: none;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+.search-box input:hover {
+  cursor: pointer;
+}
 .search-box input:focus {
-  border-color: #ff6f61;
-  box-shadow: 0 0 3px #ff6f6180;
+  border-color: #919191;
+  box-shadow: 0 0 1px #919191;
 }
 
 /* 검색박스 아이콘 설정 */
@@ -392,7 +397,8 @@ input[type='range']::-webkit-slider-thumb:active {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #ffb398;
+  color: #3b3b3b;
+  cursor: pointer;
 }
 
 /* 메뉴 전체 설정 */
@@ -404,14 +410,14 @@ input[type='range']::-webkit-slider-thumb:active {
 .menu-item {
   display: flex;
   align-items: center;
-  height: 34px;
+  height: 38px;
   padding: 10px;
   margin-bottom: 10px; /* 메뉴 항목 간 간격 */
   border-radius: 5px;
   background-color: white;
-  border: 1px solid#ccc;
-  color: #333;
-  font-weight: bold;
+  border: 1px solid#b3b3b3;
+  color: #3b3b3b;
+  font-weight: 600;
 }
 
 /* 고객센터 버튼 설정 */
@@ -437,7 +443,7 @@ input[type='range']::-webkit-slider-thumb:active {
 
 /* 메뉴 아이콘 설정 */
 .menu-item > .side-menu-icon {
-  color: #ffb398;
+  color: #3b3b3b;
 }
 
 /* 메뉴 이벤트 처리 */
@@ -462,7 +468,6 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 /* 메인 컨테이너 설정 */
-
 h2 {
   font-weight: bold;
   font-size: 28px;
@@ -535,32 +540,50 @@ h2 {
 .slider-btn {
   position: absolute;
   /* 수직 중앙 배치 */
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   background-color: white;
   color: #ffb398;
   height: 100%;
   border: none;
   cursor: pointer;
-  /* 버튼 숨김 */
-  display: none;
-  z-index: 100;
+}
+
+.slider-btn2 {
+  position: absolute;
+  /* 수직 중앙 배치 */
+  top: 60%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #ffb398;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-btn3 {
+  position: absolute;
+  /* 수직 중앙 배치 */
+  top: 68%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #ffb398;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-icon {
+  font-size: 35px; /* 아이콘 크기 조정 */
+  color: #6a6a6a; /* 아이콘 색상 변경 (필요 시) */
 }
 
 .slider-btn.left {
-  left: -20px;
+  left: -30px;
 }
 
 .slider-btn.right {
-  right: -20px;
-}
-
-.section:hover .slider-btn {
-  display: block; /* 마우스가 섹션에 올라가면 버튼 보이기 */
-}
-
-.section:hover .slider-btn {
-  display: block; /* 마우스가 섹션에 올라가면 버튼 보이기 */
+  right: -30px;
 }
 
 #section2 {
@@ -717,26 +740,28 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #dddddd;
 }
 
 .footer-letf {
   position: absolute;
-  left: 20px;
-  bottom: 20px;
+  left: 10px;
+  bottom: 10px;
   color: #8b8b8b;
   font-size: 14px;
 }
 
 .footer-l-hi {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-l-hi > a {
-  color: #8b8b8b;
-  font-size: 18px;
+  color: #353535;
+  font-size: 14px;
+  font-weight: bold;
 }
 .footer-l-lo p {
-  color: white;
+  color: rgb(107, 107, 107);
   margin-bottom: 5px;
   line-height: 1.5;
 }
@@ -748,12 +773,12 @@ h2 {
 
 .footer-service li a {
   font-size: 12px;
-  color: white;
+  color: rgb(107, 107, 107);
 }
 
 .footer-service li::after {
   content: '|';
-  color: white;
+  color: rgb(133, 132, 132);
   margin-left: 5px;
 }
 
@@ -768,12 +793,12 @@ h2 {
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 110px;
+  height: 110px;
   margin-right: 10px;
 }
 
 .logo2 {
-  width: 300px;
-  height: 100px;
+  width: 200px;
+  height: 80px;
 }

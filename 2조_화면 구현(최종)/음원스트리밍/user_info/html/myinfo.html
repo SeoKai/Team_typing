@@ -13,7 +13,7 @@
     <style>
       /* 구글 아이콘 폰트 설정 */
       .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       }
     </style>
     <!-- css -->
@@ -114,27 +114,31 @@
         <!-- 검색 박스 -->
         <div class="sidebar">
           <div class="search-box">
-            <span class="search-icon material-symbols-outlined">search</span>
-            <input type="text" placeholder="검색" />
+            <span class="search-icon material-symbols-outlined" id="searchIcon"
+              >search</span
+            >
+            <input type="text" id="searchInput" placeholder="검색" />
           </div>
           <!-- 메뉴 항목 -->
           <div class="menu">
-            <a href="../../main/html/index.html" class="menu-item">
-              <span class="side-menu-icon material-symbols-outlined">home</span>
-              홈
-            </a>
-            <a href="javascript:void(0)" class="menu-item">
-              <span class="side-menu-icon material-symbols-outlined"
+            <a href="../../main/html/index.html" class="menu-item"
+              ><span class="side-menu-icon material-symbols-outlined">home</span
+              >홈</a
+            >
+            <a href="javascript:void(0)" class="menu-item"
+              ><span class="side-menu-icon material-symbols-outlined"
                 >settings</span
-              >
-              설정
-            </a>
-            <a href="../../user_info/html/myinfo.html" class="menu-item">
-              <span class="side-menu-icon material-symbols-outlined"
+              >설정</a
+            >
+            <a href="../../album/html/musicinfo.html" class="menu-item"
+              ><span class="side-menu-icon material-symbols-outlined"
                 >lists</span
-              >
-              재생 목록
-            </a>
+              >재생 목록</a
+            >
+            <a href="../../user_info/html/myinfo.html" class="menu-item"
+              ><span class="side-menu-icon material-symbols-outlined">info</span
+              >마이 페이지</a
+            >
           </div>
           <!-- 고객 센터 -->
           <div class="customer-support">

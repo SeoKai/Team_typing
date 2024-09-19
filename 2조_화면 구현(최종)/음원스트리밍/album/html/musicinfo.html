@@ -11,7 +11,7 @@
     />
     <style>
       .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       }
     </style>
     <!-- css -->
@@ -110,8 +110,10 @@
         <!-- 검색 박스 -->
         <div class="sidebar">
           <div class="search-box">
-            <span class="search-icon material-symbols-outlined">search</span>
-            <input type="text" placeholder="검색" />
+            <span class="search-icon material-symbols-outlined" id="searchIcon"
+              >search</span
+            >
+            <input type="text" id="searchInput" placeholder="검색" />
           </div>
           <!-- 메뉴 항목 -->
           <div class="menu">
@@ -124,10 +126,14 @@
                 >settings</span
               >설정</a
             >
-            <a href="../../user_info/html/myinfo.html" class="menu-item"
+            <a href="../../album/html/musicinfo.html" class="menu-item"
               ><span class="side-menu-icon material-symbols-outlined"
                 >lists</span
               >재생 목록</a
+            >
+            <a href="../../user_info/html/myinfo.html" class="menu-item"
+              ><span class="side-menu-icon material-symbols-outlined">info</span
+              >마이 페이지</a
             >
           </div>
           <!-- 고객 센터 -->
@@ -488,80 +494,80 @@
 
             <script>
               let n = 1;
-              let slider1 = document.querySelector(".slider1");
-              let slider2 = document.querySelector(".slider2");
-              let slider3 = document.querySelector(".slider3");
-              let slider4 = document.querySelector(".slider4");
-              let slider5 = document.querySelector(".slider5");
-              let slider6 = document.querySelector(".slider6");
-              let slider7 = document.querySelector(".slider7");
-              let slider8 = document.querySelector(".slider8");
+              let slider1 = document.querySelector('.slider1');
+              let slider2 = document.querySelector('.slider2');
+              let slider3 = document.querySelector('.slider3');
+              let slider4 = document.querySelector('.slider4');
+              let slider5 = document.querySelector('.slider5');
+              let slider6 = document.querySelector('.slider6');
+              let slider7 = document.querySelector('.slider7');
+              let slider8 = document.querySelector('.slider8');
 
               function s1() {
-                slider1.setAttribute("style", "display: flex");
-                slider2.setAttribute("style", "display: none");
+                slider1.setAttribute('style', 'display: flex');
+                slider2.setAttribute('style', 'display: none');
               }
               function s2() {
-                slider1.setAttribute("style", "display: none");
-                slider2.setAttribute("style", "display: flex");
-                slider3.setAttribute("style", "display: none");
+                slider1.setAttribute('style', 'display: none');
+                slider2.setAttribute('style', 'display: flex');
+                slider3.setAttribute('style', 'display: none');
               }
               function s3() {
-                slider2.setAttribute("style", "display: none");
-                slider3.setAttribute("style", "display: flex");
-                slider4.setAttribute("style", "display: none");
+                slider2.setAttribute('style', 'display: none');
+                slider3.setAttribute('style', 'display: flex');
+                slider4.setAttribute('style', 'display: none');
               }
               function s4() {
-                slider3.setAttribute("style", "display: none");
-                slider4.setAttribute("style", "display: flex");
-                slider5.setAttribute("style", "display: none");
+                slider3.setAttribute('style', 'display: none');
+                slider4.setAttribute('style', 'display: flex');
+                slider5.setAttribute('style', 'display: none');
               }
               function s5() {
-                slider4.setAttribute("style", "display: none");
-                slider5.setAttribute("style", "display: flex");
-                slider6.setAttribute("style", "display: none");
+                slider4.setAttribute('style', 'display: none');
+                slider5.setAttribute('style', 'display: flex');
+                slider6.setAttribute('style', 'display: none');
               }
               function s6() {
-                slider5.setAttribute("style", "display: none");
-                slider6.setAttribute("style", "display: flex");
-                slider7.setAttribute("style", "display: none");
+                slider5.setAttribute('style', 'display: none');
+                slider6.setAttribute('style', 'display: flex');
+                slider7.setAttribute('style', 'display: none');
               }
               function s7() {
-                slider6.setAttribute("style", "display: none");
-                slider7.setAttribute("style", "display: flex");
-                slider8.setAttribute("style", "display: none");
+                slider6.setAttribute('style', 'display: none');
+                slider7.setAttribute('style', 'display: flex');
+                slider8.setAttribute('style', 'display: none');
               }
               function s8() {
-                slider7.setAttribute("style", "display: none");
-                slider8.setAttribute("style", "display: flex");
+                slider7.setAttribute('style', 'display: none');
+                slider8.setAttribute('style', 'display: flex');
               }
 
               // 호버링
-              const main = document.querySelector(".section-main");
-              let forward = document.querySelector("#forward");
-              let back = document.querySelector("#back");
+              const main = document.querySelector('.section-main');
+              let forward = document.querySelector('#forward');
+              let back = document.querySelector('#back');
 
-              main.addEventListener("mouseover", () => {
+              main.addEventListener('mouseover', () => {
                 if (n > 1 && n < 8) {
-                  forward.setAttribute("style", "opacity: 1; cursor: pointer");
-                  back.setAttribute("style", "opacity: 1; cursor: pointer");
+                  forward.setAttribute('style', 'opacity: 1; cursor: pointer');
+                  back.setAttribute('style', 'opacity: 1; cursor: pointer');
                 } else if (n == 1)
-                  forward.setAttribute("style", "opacity: 1; cursor: pointer");
+                  forward.setAttribute('style', 'opacity: 1; cursor: pointer');
                 else if (n == 8)
-                  back.setAttribute("style", "opacity: 1; cursor: pointer");
+                  back.setAttribute('style', 'opacity: 1; cursor: pointer');
               });
 
-              main.addEventListener("mouseleave", () => {
-                forward.setAttribute("style", "opacity: 0;");
-                back.setAttribute("style", "opacity: 0;");
+              main.addEventListener('mouseleave', () => {
+                forward.setAttribute('style', 'opacity: 0;');
+                back.setAttribute('style', 'opacity: 0;');
               });
 
               // 앞으로 이동
-              forward.addEventListener("click", () => {
+              forward.addEventListener('click', () => {
                 if (n < 8) n++;
                 if (n == 2) {
                   s2();
-                  back.setAttribute("style", "opacity: 1; cursor: pointer");
+                  back.setAttribute('style', 'opacity: 1; cursor: pointer');
                 } else if (n == 3) s3();
                 else if (n == 4) s4();
                 else if (n == 5) s5();
@@ -569,24 +575,24 @@
                 else if (n == 7) s7();
                 else if (n == 8) {
                   s8();
-                  forward.setAttribute("style", "opacity: 0");
+                  forward.setAttribute('style', 'opacity: 0');
                 }
               });
 
               // 뒤로 이동
-              back.addEventListener("mouseover", () => {
+              back.addEventListener('mouseover', () => {
                 if (n > 1 && n < 9)
-                  back.setAttribute("style", "opacity: 1; cursor: pointer");
-                else back.setAttribute("style", "opacity: 0");
+                  back.setAttribute('style', 'opacity: 1; cursor: pointer');
+                else back.setAttribute('style', 'opacity: 0');
               });
-              back.addEventListener("mouseleave", () => {
-                back.setAttribute("style", "opacity: 0");
+              back.addEventListener('mouseleave', () => {
+                back.setAttribute('style', 'opacity: 0');
               });
-              back.addEventListener("click", () => {
+              back.addEventListener('click', () => {
                 if (n > 1) n--;
                 if (n == 1) {
                   s1();
-                  back.setAttribute("style", "opacity: 0");
+                  back.setAttribute('style', 'opacity: 0');
                 } else if (n == 2) s2();
                 else if (n == 3) s3();
                 else if (n == 4) s4();
@@ -594,10 +600,9 @@
                 else if (n == 6) s6();
                 else if (n == 7) {
                   s7();
-                  forward.setAttribute("style", "opacity: 1; cursor: pointer");
+                  forward.setAttribute('style', 'opacity: 1; cursor: pointer');
                 }
               });
-              
             </script>
           </div>
 
@@ -758,14 +763,14 @@
       </div>
       <!--  -->
       <script>
-        const search = document.querySelector('.sidebar>.search-box>input')
+        const search = document.querySelector('.sidebar>.search-box>input');
 
-        search.addEventListener('keyup',(e)=>{
-          if(e.key === 'Enter'){
-            console.log('확인')
-            window.location.href = "../../search/html/search.html"
+        search.addEventListener('keyup', (e) => {
+          if (e.key === 'Enter') {
+            console.log('확인');
+            window.location.href = '../../search/html/search.html';
           }
-        })
+        });
       </script>
     </div>
   </body>
