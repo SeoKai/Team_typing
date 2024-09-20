@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,12 +11,12 @@
     />
     <style>
       .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
       }
     </style>
     <!-- css -->
     <link rel="stylesheet" href="../css/common_musicinfo.css" />
-    <link rel="stylesheet" href="../css/musicinfo.css">
+    <link rel="stylesheet" href="../css/musicinfo.css" />
   </head>
 
   <!-- header 기본 구조   : width 100% 기준, 약간의 간격 제외하고 모두 너비 % -> 반응형
@@ -38,25 +37,25 @@
           <div class="left">
             <!-- 셔플 버튼 -->
             <div class="play-btn">
-              <a class="shuffle" href=""
+              <a class="shuffle" href="javascript:void(0)"
                 ><span class="material-symbols-outlined"> shuffle </span></a
               >
               <!-- 이전 곡 버튼 -->
-              <a href=""
+              <a href="javascript:void(0)"
                 ><span class="material-symbols-outlined">
                   skip_previous
                 </span></a
               >
               <!-- 재생 버튼 -->
-              <a href=""
+              <a href="javascript:void(0)"
                 ><span class="material-symbols-outlined"> play_arrow </span></a
               >
               <!-- 다음 곡 버튼 -->
-              <a href=""
+              <a href="javascript:void(0)"
                 ><span class="material-symbols-outlined"> skip_next </span></a
               >
               <!-- 반복 버튼 -->
-              <a href=""
+              <a href="javascript:void(0)"
                 ><span class="material-symbols-outlined"> repeat </span></a
               >
             </div>
@@ -69,8 +68,8 @@
               <img src="../img/로고고양이.png" />
               <div>
                 <!-- 노래 제목 및 아티스트 정보 -->
-                <a href=""><b>앨범명</b></a>
-                <a href="">가수 - 제목</a>
+                <a href="../../album/html/musicinfo.html"><b>앨범명</b></a>
+                <a href="javascript:void(0)">가수 - 제목</a>
               </div>
             </div>
             <!-- 사운드 컨트롤러 영역 -->
@@ -85,14 +84,14 @@
           <div class="right">
             <!-- 업로드 버튼 -->
             <div class="upload">
-              <a href="">
+              <a href="../../upload/html/01_v01submain.html">
                 <span class="material-symbols-outlined">upload</span>
                 업로드
               </a>
             </div>
             <!-- 로그인 버튼 -->
             <div class="login">
-              <a href="">
+              <a href="../../upload/html/01_v01Login.html">
                 <span class="material-symbols-outlined">person</span>
                 로그인
               </a>
@@ -103,36 +102,44 @@
       <!-- 사이드바 영역 -->
       <div class="aside">
         <!-- 사이드바 로고 영역 -->
-        <a href="" class="side-logo">
+        <a href="../../main/html/index.html" class="side-logo">
           <img src="../img/로고고양이.png" alt="Catch-logo" />
           <img src="../img/nlogo2.png" alt="Catch-logo2" />
         </a>
         <!-- 검색 박스 -->
         <div class="sidebar">
           <div class="search-box">
-            <span class="search-icon material-symbols-outlined">search</span>
-            <input type="text" placeholder="검색" />
+            <span class="search-icon material-symbols-outlined" id="searchIcon"
+              >search</span
+            >
+            <input type="text" id="searchInput" placeholder="검색" />
           </div>
           <!-- 메뉴 항목 -->
           <div class="menu">
-            <a href="" class="menu-item"
+            <a href="../../main/html/index.html" class="menu-item"
               ><span class="side-menu-icon material-symbols-outlined">home</span
               >홈</a
             >
-            <a href="" class="menu-item"
+            <a href="javascript:void(0)" class="menu-item"
               ><span class="side-menu-icon material-symbols-outlined"
                 >settings</span
               >설정</a
             >
-            <a href="" class="menu-item"
+            <a href="../../album/html/musicinfo.html" class="menu-item"
               ><span class="side-menu-icon material-symbols-outlined"
                 >lists</span
               >재생 목록</a
             >
+            <a href="../../user_info/html/myinfo.html" class="menu-item"
+              ><span class="side-menu-icon material-symbols-outlined">info</span
+              >마이 페이지</a
+            >
           </div>
           <!-- 고객 센터 -->
           <div class="customer-support">
-            <a href=""><span class="material-symbols-outlined">help</span></a>
+            <a href="javascript:void(0)"
+              ><span class="material-symbols-outlined">help</span></a
+            >
           </div>
         </div>
       </div>
@@ -593,21 +600,23 @@
             <li><a href=""><img src="../img/뉴진스.jpg" alt=""></a></li>
           </ul>
          </div>
-
-
         </div>
-         <!-- /* !!!추가된 부분 */ -->
+      </div>
+
+
+
+      <!-- /* !!!추가된 부분 */ -->
       <div class="footer">
         <div class="footer-letf">
           <div class="footer-l-hi"><a href="">대한민국</a></div>
           <div class="footer-l-lo">
             <p><em>CatCh</em>. 모든 권리 보유</p>
             <ul class="footer-service">
-              <li><a href="">인터넷 서비스 약관</a></li>
-              <li><a href="">Catch 및 개인 정보</a></li>
-              <li><a href="">쿠키 경고</a></li>
-              <li><a href="">지원</a></li>
-              <li><a href="">피드백</a></li>
+              <li><a href="javascript:void(0)">인터넷 서비스 약관</a></li>
+              <li><a href="javascript:void(0)">Catch 및 개인 정보</a></li>
+              <li><a href="javascript:void(0)">쿠키 경고</a></li>
+              <li><a href="javascript:void(0)">지원</a></li>
+              <li><a href="javascript:void(0)">피드백</a></li>
             </ul>
           </div>
         </div>
@@ -617,11 +626,16 @@
         </div>
       </div>
       <!--  -->
-    </div>
+      <script>
+        const search = document.querySelector(".sidebar>.search-box>input");
 
-  </body>
-</html>
-      </div>
+        search.addEventListener("keyup", (e) => {
+          if (e.key === "Enter") {
+            console.log("확인");
+            window.location.href = "../../search/html/search.html";
+          }
+        });
+      </script>
     </div>
   </body>
 </html>
