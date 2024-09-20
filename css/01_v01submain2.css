@@ -401,11 +401,11 @@ main>.up-registration>.up-registration-1>article>.up-registration-file>.up-regis
 
 /*   로그인  */
 
-.up_login{
+.up_login {
     width: 100%;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 28px; 
     font-weight: 400;
      
     display: flex;
@@ -417,95 +417,54 @@ main>.up-registration>.up-registration-1>article>.up-registration-file>.up-regis
     background-size: cover;
 }
 
-.up_login>.up_login_top{
-    width: 250px;
-    height: 300px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
-    filter: drop-shadow(0px 20px 30px #ffa8a2);
-    backdrop-filter: blur(25px);
-    border-radius: 30px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-
+.up_login_id> input{
+    width: 300px; height: 30px;
     
-   
 }
 
-.up_login>.up_login_top>a>img{
-    width: 150px;height: 100px;
+.up_iogin_pass>input{
+    width: 300px; height: 30px;
+}
+
+.up_login__btn>button{
+    width: 80px;height: 30px;
 }
 
 
-.up_login>.up_login_top>.up_login_id{
-    width: 360px;
-    height: 530px;
+
+
+.up_login > .up_login_top {
+    width: 500px; 
+    height: 600px; 
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: drop-shadow(0px 40px 60px #ffa8a2); 
+    backdrop-filter: blur(50px); 
+    border-radius: 60px; 
+    border: 4px solid rgba(255, 255, 255, 0.2); 
+    position: relative;
+}
+
+.up_login > .up_login_top>a>img {
+    width: 300px; 
+    height: 200px; 
+}
+
+.up_login > .up_login_top > .up_login_id {
+    width: 720px; 
+    height: 1060px; 
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 60px 60px 40px 60px;
+    border-radius: 60px; 
+    border: 2px solid rgba(255, 255, 255, 0.2); 
+    padding: 120px 120px 80px 120px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
-    bottom: -2px;
-    left: -2px;
-
-    
+    bottom: -4px; /* 위치 조정 */
+    left: -4px; /* 위치 조정 */
 }
 
-
-.up_login{
-    width: 100%;
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-     
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
-    background-position: center;
-    background-size: cover;
-}
-
-.up_login>.up_login_top{
-    width: 250px;
-    height: 300px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
-    filter: drop-shadow(0px 20px 30px #ffa8a2);
-    backdrop-filter: blur(25px);
-    border-radius: 30px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-
-    
-   
-}
-
-.up_login>.up_login_top>img{
-    width: 150px;height: 100px;
-}
-
-
-.up_login>.up_login_top>.up_login_id{
-    width: 360px;
-    height: 530px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 60px 60px 40px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    bottom: -2px;
-    left: -2px;
-
-    
-}
-
-.up_login>.up_login_top>.up_login__btn>button{
-   
+.up_login > .up_login_top > .up_login__btn > button {
+    width: 200%; /* 버튼 크기 2배 */
+    font-size: 1.2em; /* 버튼 폰트 크기 증가 */
 }
