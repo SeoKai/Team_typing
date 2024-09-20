@@ -1,10 +1,10 @@
 /* 나눔고딕 폰트 설정 */
-@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
 
 /* 모든 요소에 박스 모델과 나눔고딕 폰트 적용 */
 * {
   box-sizing: border-box;
-  font-family: 'Nanum Gothic';
+  font-family: "Nanum Gothic";
 }
 
 /* 배경색 설정과 기본 여백 제거 */
@@ -32,12 +32,12 @@ a {
 .wrapper {
   display: grid;
   grid-template-areas:
-    'aside header' /* 첫 번째 행: 사이드바와 헤더 */
-    'aside main' /* 두 번째 행: 사이드바와 메인 */
-    'aside footer';
+    "aside header" /* 첫 번째 행: 사이드바와 헤더 */
+    "aside main" /* 두 번째 행: 사이드바와 메인 */
+    "aside footer";
   height: 100vh;
   grid-template-columns: 260px auto; /* 열 너비 설정 */
-  grid-template-rows: 54px auto 200px;/* 행 높이 설정 */
+  grid-template-rows: 54px auto 200px; /* 행 높이 설정 */
 }
 
 /* 헤더 스타일 설정 */
@@ -178,7 +178,7 @@ a {
 }
 
 /* 사운드 바 스타일링 */
-input[type='range'] {
+input[type="range"] {
   -webkit-appearance: none; /*WebKit*/
   -moz-appearance: none; /* Firefox */
   appearance: none; /* 표준 속성 */
@@ -193,12 +193,12 @@ input[type='range'] {
 }
 
 /* 호버 시 사운드 바 효과 */
-input[type='range']:hover {
+input[type="range"]:hover {
   opacity: 1;
 }
 
 /* 사운드 바의 슬라이더(thumb) 스타일 */
-input[type='range']::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; /* 기본 슬라이더 스타일 제거 */
   appearance: none;
   width: 15px;
@@ -211,7 +211,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 /* 슬라이더가 활성화되었을 때 스타일 */
-input[type='range']::-webkit-slider-thumb:active {
+input[type="range"]::-webkit-slider-thumb:active {
   background: #ffb398;
 }
 
@@ -272,7 +272,6 @@ input[type='range']::-webkit-slider-thumb:active {
 
 /* 1100px 이하 사운드 바만 */
 @media (max-width: 1100px) {
-
   .wrapper > .header > .header-bar > .left {
     display: none;
   }
@@ -283,7 +282,7 @@ input[type='range']::-webkit-slider-thumb:active {
 
   .wrapper > .header > .header-bar {
     /* 중앙 정렬 */
-    justify-content: center; 
+    justify-content: center;
   }
 
   .wrapper > .header > .header-bar > .center {
@@ -296,7 +295,7 @@ input[type='range']::-webkit-slider-thumb:active {
 
   .wrapper > .header > .header-bar > .center > .song-info {
     /* 남은 공간을 전부 차지 */
-    flex-grow: 1; 
+    flex-grow: 1;
     max-width: none;
     margin: 0 auto;
     display: flex;
@@ -327,7 +326,7 @@ input[type='range']::-webkit-slider-thumb:active {
   height: 100%;
   width: 260px;
   background-color: #ffc9b6;
-  z-index:101;
+  z-index: 101;
 }
 
 /* 로고 영역 설정 */
@@ -453,43 +452,42 @@ input[type='range']::-webkit-slider-thumb:active {
   margin: 0 20px;
 }
 
-
 /* 메인메뉴 =  최상단 nav 바 */
-.main>.main-menu{
+.main > .main-menu {
   width: 100%;
   height: 30px;
 }
-.main>.main-menu>ul{
+.main > .main-menu > ul {
   border-top: 3px solid grey;
   height: 100%;
   width: 100%;
 
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
-.main>.main-menu>ul>li{
+.main > .main-menu > ul > li {
   width: calc(100% / 7);
   min-width: 80px;
-  
-  border: 1px solid rgb(200,200,200);
+
+  border: 1px solid rgb(200, 200, 200);
   height: 100%;
   background-color: rgb(240, 240, 240);
 
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-.main>.main-menu>ul>li:first-child{
+.main > .main-menu > ul > li:first-child {
   border-left: none;
   border-bottom: none;
   background-color: white;
 }
 
-.main>.main-menu>ul>li:last-child{
+.main > .main-menu > ul > li:last-child {
   border-right: none;
 }
-.main>.main-menu>ul>li>a{
+.main > .main-menu > ul > li > a {
   height: 100%;
   width: 100%;
   display: flex;
@@ -498,7 +496,7 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 /* 프로필 설정하는곳 */
-.main>.prfe-wrap{
+.main > .prfe-wrap {
   /* border: 1px solid rgb(240,240,240); */
   border: 1px solid black;
   width: 100%;
@@ -514,90 +512,90 @@ input[type='range']::-webkit-slider-thumb:active {
   background-size: cover;
 }
 /* 프로필 설정 - 가운데부분 */
-.main>.prfe-wrap>.profile{
+.main > .prfe-wrap > .profile {
   height: 120px;
   width: 100%;
   position: relative;
-  background-color: rgba(220, 220, 220, 0.8); 
+  background-color: rgba(220, 220, 220, 0.8);
 
   display: flex;
   flex-direction: column;
-  justify-content:end;
+  justify-content: end;
   align-items: center;
 }
 /* 섬네일 부분 */
-.main>.prfe-wrap>.profile>.thumb{
+.main > .prfe-wrap > .profile > .thumb {
   width: 150px;
   height: 150px;
   border: 3px solid white;
-  position: absolute; 
-  left:calc((100% - 150px) / 2);
-  top:-75%;
+  position: absolute;
+  left: calc((100% - 150px) / 2);
+  top: -75%;
 }
-.main>.prfe-wrap>.profile>.thumb>span>img{
+.main > .prfe-wrap > .profile > .thumb > span > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 /* 소개 부분 */
-.main>.prfe-wrap>.profile>.intro{
+.main > .prfe-wrap > .profile > .intro {
   width: 100%;
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 /* 유저이름 (닉네임) */
-.main>.prfe-wrap>.profile>.intro>.nic{
+.main > .prfe-wrap > .profile > .intro > .nic {
   width: 100%;
   height: 30px;
   margin: 5px auto;
-  
+
   font-weight: bolder;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 /* 소개글 */
-.main>.prfe-wrap>.profile>.intro>.intro_prfe{
+.main > .prfe-wrap > .profile > .intro > .intro_prfe {
   height: 60px;
 }
 
 /* 음원 활동 (좋아요 플레이리스트 개수 등)*/
-.main>.prfe-wrap>.profile>.intro>.show{
+.main > .prfe-wrap > .profile > .intro > .show {
   height: 26px;
   width: 100%;
-  font-size: .8rem;
+  font-size: 0.8rem;
   display: none;
 }
-.main>.prfe-wrap>.profile>.intro>.show>ul{
+.main > .prfe-wrap > .profile > .intro > .show > ul {
   display: flex;
   justify-content: left;
   align-items: center;
-  gap:30px;
+  gap: 30px;
   position: relative;
 }
-.main>.prfe-wrap>.profile>.intro>.show>ul>li{
+.main > .prfe-wrap > .profile > .intro > .show > ul > li {
   position: relative;
 }
-.main>.prfe-wrap>.profile>.intro>.show>ul>li::after{
+.main > .prfe-wrap > .profile > .intro > .show > ul > li::after {
   content: "|";
   position: absolute;
   left: 115%;
   top: 0px;
-  color: rgb(100,100,100);
+  color: rgb(100, 100, 100);
 }
-.main>.prfe-wrap>.profile>.intro>.show>ul>li:last-child::after{
+.main > .prfe-wrap > .profile > .intro > .show > ul > li:last-child::after {
   content: none;
 }
-.main>.prfe-wrap>.profile>.intro>.show>ul>li>a>span{
- margin: 0 5px;
- font-weight: bolder;
+.main > .prfe-wrap > .profile > .intro > .show > ul > li > a > span {
+  margin: 0 5px;
+  font-weight: bolder;
 }
 /* 음원 기록 */
-.main>.prfe-wrap>.profile>.music-record{
+.main > .prfe-wrap > .profile > .music-record {
   /* border: 1px solid pink; */
   height: 100%;
   width: calc(100% - 60% - 280px);
@@ -607,26 +605,26 @@ input[type='range']::-webkit-slider-thumb:active {
   justify-content: center;
   display: none;
 }
-.main>.prfe-wrap>.profile>.music-record>.record{
+.main > .prfe-wrap > .profile > .music-record > .record {
   height: 45%;
   padding-bottom: 5px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   /* 제목만 볼더? 전체볼더? 일단 제목만 볼더함 */
   /* font-weight: bolder; */
 
   /* 왼쪽 구분선 */
-  border-left: 1px solid rgb(100,100,100);
-  border-right: 1px solid rgb(100,100,100);
-  padding-left: 10px;  
+  border-left: 1px solid rgb(100, 100, 100);
+  border-right: 1px solid rgb(100, 100, 100);
+  padding-left: 10px;
 }
-.main>.prfe-wrap>.profile>.music-record>.record>span{
+.main > .prfe-wrap > .profile > .music-record > .record > span {
   font-weight: bolder;
 }
-.main>.prfe-wrap>.profile>.music-record>.record>ul>li{
-  font-size: .8rem;
+.main > .prfe-wrap > .profile > .music-record > .record > ul > li {
+  font-size: 0.8rem;
 }
 /* profile 젤 오른쪽 */
-.main>.prfe-wrap>.profile>.prfe-music-right{
+.main > .prfe-wrap > .profile > .prfe-music-right {
   width: 20%;
   height: 100%;
   padding-left: 10px;
@@ -637,32 +635,43 @@ input[type='range']::-webkit-slider-thumb:active {
   align-items: start;
   display: none;
 }
-.main>.prfe-wrap>.profile>.prfe-music-right>.prfe-music{
-  font-size: .9rem;
+.main > .prfe-wrap > .profile > .prfe-music-right > .prfe-music {
+  font-size: 0.9rem;
   font-weight: bolder;
 
   padding-top: 2px;
 }
-.main>.prfe-wrap>.profile>.prfe-music-right>.music-info{
+.main > .prfe-wrap > .profile > .prfe-music-right > .music-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 85%;
 }
-.main>.prfe-wrap>.profile>.prfe-music-right>.music-info>.music-thumb{
+.main > .prfe-wrap > .profile > .prfe-music-right > .music-info > .music-thumb {
   width: 37%;
   height: 85%;
 }
-.main>.prfe-wrap>.profile>.prfe-music-right>.music-info>.music-thumb>img{
+.main
+  > .prfe-wrap
+  > .profile
+  > .prfe-music-right
+  > .music-info
+  > .music-thumb
+  > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.main>.prfe-wrap>.profile>.prfe-music-right>.music-info>.prfe-music-lyrics{
+.main
+  > .prfe-wrap
+  > .profile
+  > .prfe-music-right
+  > .music-info
+  > .prfe-music-lyrics {
   width: 57%;
   height: 90%;
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin-left: 5px;
 
   display: flex;
@@ -670,28 +679,27 @@ input[type='range']::-webkit-slider-thumb:active {
   justify-content: center;
   align-items: start;
 }
-.main>.prfe-wrap>.profile>.prfe-music-left{
+.main > .prfe-wrap > .profile > .prfe-music-left {
   width: 14%;
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin-top: 3px;
 }
 
 /* 프로필 설정 영역 */
 
-.main>.prfe-wrap>.prfe-setting{
+.main > .prfe-wrap > .prfe-setting {
   height: 35px;
   width: 100%;
-  padding:7px 10px;
+  padding: 7px 10px;
 
   display: flex;
   justify-content: end;
   align-items: center;
   background-color: white;
-
 }
-.main>.prfe-wrap>.prfe-setting>.left{
+.main > .prfe-wrap > .prfe-setting > .left {
   width: 70px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   border: 1px solid;
   border-radius: 3px;
   background-color: rgb(240, 240, 240);
@@ -702,281 +710,329 @@ input[type='range']::-webkit-slider-thumb:active {
   justify-content: center;
   margin: 6px;
 }
-.main>.prfe-wrap>.prfe-setting>.right{
+.main > .prfe-wrap > .prfe-setting > .right {
   /* border: 1px solid; */
   width: 320px;
   height: 19px;
-  font-size: .75rem;
+  font-size: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
 
   display: none;
 }
-.main>.prfe-wrap>.prfe-setting>.right>ul{
+.main > .prfe-wrap > .prfe-setting > .right > ul {
   display: flex;
   align-items: center;
   justify-content: right;
-  text-decoration: rgb(240,240,240);
+  text-decoration: rgb(240, 240, 240);
 }
-.main>.prfe-wrap>.prfe-setting>.right>ul>li{
+.main > .prfe-wrap > .prfe-setting > .right > ul > li {
   position: relative;
   padding: 0 10px;
-  
 }
-.main>.prfe-wrap>.prfe-setting>.right>ul>li::after{
+.main > .prfe-wrap > .prfe-setting > .right > ul > li::after {
   content: "|";
   position: absolute;
   left: 100%;
   top: -1px;
-  color: rgb(100,100,100);
+  color: rgb(100, 100, 100);
 }
-.main>.prfe-wrap>.prfe-setting>.right>ul>li:last-child::after{
+.main > .prfe-wrap > .prfe-setting > .right > ul > li:last-child::after {
   content: none;
 }
 /* 메인바디 영역 height 임시로 1000px 잡음 */
-.main>.main-body{
+.main > .main-body {
   margin: 0;
   height: auto;
   width: 100%;
   overflow-x: hidden;
 }
-.main>.main-body>section{
+.main > .main-body > section {
   margin: 20px auto;
 }
 
-
-.main>.main-body>.my-playlist{
+.main > .main-body > .my-playlist {
   width: 100%;
   height: 300px;
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  
 }
-.main>.main-body>.my-playlist>.my-playlist-header{
+.main > .main-body > .my-playlist > .my-playlist-header {
   width: 100%;
   height: 50px;
 
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom: 1px solid rgb(200,200,200);
+  border-bottom: 1px solid rgb(200, 200, 200);
   background-color: #fba68727;
 }
-.main>.main-body>.my-playlist>.my-playlist-header>h3{
+.main > .main-body > .my-playlist > .my-playlist-header > h3 {
   margin: auto 0;
 }
-.main>.main-body>.my-playlist>.my-playlist-header>h3::before{
+.main > .main-body > .my-playlist > .my-playlist-header > h3::before {
   content: "|";
   padding-right: 5px;
   color: #ff6f61;
 }
-.main>.main-body>.my-playlist>.my-playlist-header>a{
-  font-size: .8rem;
+.main > .main-body > .my-playlist > .my-playlist-header > a {
+  font-size: 0.8rem;
 }
-.main>.main-body>.my-playlist>.my-playlist-body{
+.main > .main-body > .my-playlist > .my-playlist-body {
   width: 100%;
   height: calc(100% - 50px);
-  margin-top:10px;
+  margin-top: 10px;
   overflow: hidden;
   background-color: #fba68727;
   position: relative;
 }
-.main>.main-body>.my-playlist>.my-playlist-body>.prev{
+.main > .main-body > .my-playlist > .my-playlist-body > .prev {
   position: absolute;
   left: 0;
-  top:49%;
+  top: 49%;
   z-index: 100;
 }
-.main>.main-body>.my-playlist>.my-playlist-body>.next{
+.main > .main-body > .my-playlist > .my-playlist-body > .next {
   position: absolute;
   right: 0;
-  top:49%;
+  top: 49%;
   z-index: 100;
 }
 /* 전체 슬라이더 조정 */
-.my-playlist>.my-playlist-body>.slider{
+.my-playlist > .my-playlist-body > .slider {
   width: 450%;
   height: 100%;
-  
+
   position: relative;
 
-  display:flex;
+  display: flex;
   align-items: center;
 
-  transition: .5s;
+  transition: 0.5s;
 }
 /* 각 슬라이드 조정 */
-.my-playlist>.my-playlist-body>.slider>.item{
+.my-playlist > .my-playlist-body > .slider > .item {
   width: 450%;
   height: 100%;
-  
+
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
 
-  position:relative;
-  left:0;
-  top:0;
+  position: relative;
+  left: 0;
+  top: 0;
 
-  transition: .5s;
-  padding:0 10px;
+  transition: 0.5s;
+  padding: 0 10px;
 }
-.my-playlist>.my-playlist-body>.slider>.item>.list-item{
+.my-playlist > .my-playlist-body > .slider > .item > .list-item {
   width: 11%;
-  height: 100%; 
+  height: 100%;
 
   display: flex;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
-.my-playlist>.my-playlist-body>.slider>.item>.list-item>.playlist-thumb{
+.my-playlist
+  > .my-playlist-body
+  > .slider
+  > .item
+  > .list-item
+  > .playlist-thumb {
   width: 60%;
   height: 100%;
   padding: 0 5px;
 }
-.my-playlist>.my-playlist-body>.slider>.item>.list-item>.playlist-thumb>img{
+.my-playlist
+  > .my-playlist-body
+  > .slider
+  > .item
+  > .list-item
+  > .playlist-thumb
+  > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.my-playlist>.my-playlist-body>.slider>.item>.list-item>.playlist-info{
+.my-playlist
+  > .my-playlist-body
+  > .slider
+  > .item
+  > .list-item
+  > .playlist-info {
   width: 40%;
-  padding:0 5px;
-  
+  padding: 0 5px;
+
   display: flex;
   align-items: start;
   justify-content: center;
   flex-direction: column;
 }
-.my-playlist>.my-playlist-body>.slider>.item>.list-item>.playlist-info>.playlist-detail{
+.my-playlist
+  > .my-playlist-body
+  > .slider
+  > .item
+  > .list-item
+  > .playlist-info
+  > .playlist-detail {
   height: 15%;
   width: 80%;
   padding-top: 10px;
   /* border-bottom: 1px solid rgb(200,200,200); */
-  font-size: .75rem;
-  
+  font-size: 0.75rem;
+
   display: flex;
   justify-content: start;
   gap: 10px;
 }
-.my-playlist-body>.slider>.item>.list-item>.playlist-info>.playlist-detail>.cntsong{
+.my-playlist-body
+  > .slider
+  > .item
+  > .list-item
+  > .playlist-info
+  > .playlist-detail
+  > .cntsong {
   display: none;
 }
-.my-playlist-body>.slider>.item>.list-item>.playlist-info>.playlist-detail>.playlist-owner::after{
+.my-playlist-body
+  > .slider
+  > .item
+  > .list-item
+  > .playlist-info
+  > .playlist-detail
+  > .playlist-owner::after {
   content: "|";
   position: relative;
-  left:4.5px;
-  color:rgb(200,200,200);
+  left: 4.5px;
+  color: rgb(200, 200, 200);
   display: none;
 }
-.my-playlist>.my-playlist-body>.slider>.item>.list-item>.playlist-info>.like{
-  font-size: .9rem;
+.my-playlist
+  > .my-playlist-body
+  > .slider
+  > .item
+  > .list-item
+  > .playlist-info
+  > .like {
+  font-size: 0.9rem;
   font-weight: bolder;
-  
+
   display: flex;
   align-items: center;
   width: 100%;
   height: 15%;
-  gap:5px;
-  
+  gap: 5px;
+
   border-bottom: none;
 }
-.my-playlist>.my-playlist-body>.slider>.item>.list-item>.playlist-info>.like>.heart.clicked span{
+.my-playlist
+  > .my-playlist-body
+  > .slider
+  > .item
+  > .list-item
+  > .playlist-info
+  > .like
+  > .heart.clicked
+  span {
   color: red;
 }
-.my-playlist-body>.slider>.item>.list-item>.playlist-info>.songlist{
+.my-playlist-body > .slider > .item > .list-item > .playlist-info > .songlist {
   height: 10%;
   width: 80%;
   padding-top: 10px;
-  font-size: .75rem;
+  font-size: 0.75rem;
   display: none;
 }
-.my-playlist-body>.slider>.item>.list-item>.playlist-info>.songlist>a:last-child{
+.my-playlist-body
+  > .slider
+  > .item
+  > .list-item
+  > .playlist-info
+  > .songlist
+  > a:last-child {
   margin-left: 10px;
 }
 
 /* 섹션 2 = 최근 들은 노래 시작부분 */
-.main>.main-body>.recently-song{
+.main > .main-body > .recently-song {
   width: 100%;
   height: 300px;
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
 }
-.main>.main-body>.recently-song>.rec-header{
+.main > .main-body > .recently-song > .rec-header {
   width: 100%;
   height: 50px;
 
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom: 1px solid rgb(200,200,200);
+  border-bottom: 1px solid rgb(200, 200, 200);
   background-color: #fba68727;
 }
-.main>.main-body>.recently-song>.rec-header>h3{
+.main > .main-body > .recently-song > .rec-header > h3 {
   margin: auto 0;
 }
-.main>.main-body>.recently-song>.rec-header>h3::before{
+.main > .main-body > .recently-song > .rec-header > h3::before {
   content: "|";
   padding-right: 5px;
   color: #ff6f61;
 }
-.main>.main-body>.recently-song>.rec-header>a{
-  font-size: .8rem;
+.main > .main-body > .recently-song > .rec-header > a {
+  font-size: 0.8rem;
 }
-.main>.main-body>.recently-song>.rec-body{
+.main > .main-body > .recently-song > .rec-body {
   height: calc(100% - 50px);
   width: 100%;
   margin-top: 10px;
 }
-
 
 /* 섹션 3 자주 듣는 노래 시작부분 */
-.main>.main-body>.favorite-song{
+.main > .main-body > .favorite-song {
   width: 100%;
   height: 300px;
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-
-  
 }
-.main>.main-body>.favorite-song>.fav-header{
+.main > .main-body > .favorite-song > .fav-header {
   width: 100%;
   height: 50px;
 
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom: 1px solid rgb(200,200,200);
+  border-bottom: 1px solid rgb(200, 200, 200);
   background-color: #fba68727;
 }
-.main>.main-body>.favorite-song>.fav-header>h3{
+.main > .main-body > .favorite-song > .fav-header > h3 {
   margin: auto 0;
 }
-.main>.main-body>.favorite-song>.fav-header>h3::before{
+.main > .main-body > .favorite-song > .fav-header > h3::before {
   content: "|";
   padding-right: 5px;
   color: #ff6f61;
 }
-.main>.main-body>.favorite-song>.fav-header>a{
-  font-size: .8rem;
+.main > .main-body > .favorite-song > .fav-header > a {
+  font-size: 0.8rem;
 }
-.main>.main-body>.favorite-song>.fav-body{
+.main > .main-body > .favorite-song > .fav-body {
   height: calc(100% - 50px);
   width: 100%;
   margin-top: 10px;
 }
-.category{
+.category {
   height: 15%;
   border-bottom: 2px solid #ffb398;
 }
-.category>ul{
+.category > ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -984,89 +1040,86 @@ input[type='range']::-webkit-slider-thumb:active {
   /* border: 1px solid; */
   height: 100%;
 }
-.category>ul>li{
+.category > ul > li {
   width: calc(100% / 8);
   height: 100%;
 }
-.song-list{
+.song-list {
   height: calc(80% - 10px);
   width: 100%;
   background-color: #fba68727;
 }
-.song-list>ul{
-  width: 100%;  
+.song-list > ul {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 10px;
   padding-top: 5px;
-  font-size: .9rem;
-
-  
+  font-size: 0.9rem;
 }
-.song-list>ul>li{
+.song-list > ul > li {
   width: calc(100% / 8);
 
   white-space: nowrap;
-  overflow: hidden; 
-  text-overflow: ellipsis; 
+  overflow: hidden;
+  text-overflow: ellipsis;
   /* padding:; */
 }
-.song-list>ul>li:first-child{
+.song-list > ul > li:first-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   position: relative;
 }
-.song-list>ul>li:first-child>ul{
+.song-list > ul > li:first-child > ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:2px;
+  gap: 2px;
 
   position: absolute;
-  top:-2px;
+  top: -2px;
   left: 30px;
 }
-.recently-song>.rec-footer{
+.recently-song > .rec-footer {
   height: calc(10% + 10px);
   width: 100%;
 
   display: flex;
   align-items: center;
   padding: 5px auto;
-  border-top: 1px solid rgb(200,200,200);
-  border-bottom: 1px solid rgb(200,200,200);
+  border-top: 1px solid rgb(200, 200, 200);
+  border-bottom: 1px solid rgb(200, 200, 200);
   background-color: #fba6874d;
 }
-.recently-song>.rec-footer>ul{
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap:10px;
-  padding: 5px auto;
-}
-.favorite-song>.fav-footer{
-  height: calc(10% + 10px);
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  padding: 5px auto;
-  border-top: 1px solid rgb(200,200,200);
-  border-bottom: 1px solid rgb(200,200,200);
-  background-color: #fba6874d;
-}
-.favorite-song>.fav-footer>ul{
+.recently-song > .rec-footer > ul {
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 10px;
+  padding: 5px auto;
+}
+.favorite-song > .fav-footer {
+  height: calc(10% + 10px);
+  width: 100%;
 
+  display: flex;
+  align-items: center;
+  padding: 5px auto;
+  border-top: 1px solid rgb(200, 200, 200);
+  border-bottom: 1px solid rgb(200, 200, 200);
+  background-color: #fba6874d;
+}
+.favorite-song > .fav-footer > ul {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
 }
 
-.wrapper>.footer {
+.wrapper > .footer {
   position: relative;
   margin-top: 20px;
   grid-area: footer;
@@ -1110,13 +1163,13 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 .footer-service li::after {
-  content: '|';
+  content: "|";
   color: white;
   margin-left: 5px;
 }
 
 .footer-service li:last-child::after {
-  content: '';
+  content: "";
 }
 
 .footer-right {
@@ -1138,7 +1191,7 @@ input[type='range']::-webkit-slider-thumb:active {
   /* background-color: white; */
 }
 @media (max-width: 1500px) {
-  .wrapper>.footer{
+  .wrapper > .footer {
     height: 150px;
   }
   .logo {
@@ -1147,7 +1200,7 @@ input[type='range']::-webkit-slider-thumb:active {
     margin-right: 10px;
     /* background-color: white; */
   }
-  
+
   .logo2 {
     width: 200px;
     height: 66px;
@@ -1157,18 +1210,17 @@ input[type='range']::-webkit-slider-thumb:active {
     left: 0;
   }
 }
-@media (max-width: 1050px){
-  .wrapper>.footer{
+@media (max-width: 1050px) {
+  .wrapper > .footer {
     height: 100px;
   }
   .logo {
     width: 70px;
     height: 70px;
     margin-right: 10px;
-
-  }.logo2 {
+  }
+  .logo2 {
     width: 150px;
     height: 40px;
-
   }
 }
