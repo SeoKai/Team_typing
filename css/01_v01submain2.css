@@ -10,8 +10,8 @@ a{
 .main{
   
 
-    overflow: scroll;
-    margin: 0 20px; 
+    /* overflow: scroll; */
+    margin: 0 auto; 
     padding: 0 20px;
     font-family: "Noto Sans KR", sans-serif;
 }
@@ -161,7 +161,7 @@ a{
 
 .main>.up-main>.up-main-2>.up-fileAdd>h4>li{
     width: 100%;
-    padding: 4px 10px 0px;
+    padding: 4px 10px 10px 5px;
     vertical-align: middle;
 }
 @media (max-width: 1150px){
@@ -183,7 +183,7 @@ a{
  justify-content: center;
  text-align: center;
 
- margin: 60px 0 10px;
+ margin: 5px 0 10px;
 }
 
 .main>.up-registration>.up-registration-1>article{
@@ -210,13 +210,18 @@ a{
    background-color:none;
 }
 
-
+.up_registration_title{
+    
+}
+.up_registration_title>h3{
+    padding: 50px 150px 0px;
+}
 
 .main>.up-registration>.up-registration-1>article>.up-registration-file>.registration-part-1{
- display: inline block;
+ /* display: inline block;
 background: none;
-width: 100px; height: 220px;
-margin:0;
+width: ; height: 220px;
+margin:0; */
 
 }
 @media (max-width: 1150px){
@@ -426,7 +431,7 @@ main>.up-registration>.up-registration-1>article>.up-registration-file>.up-regis
    
 }
 
-.up_login>.up_login_top>img{
+.up_login>.up_login_top>a>img{
     width: 150px;height: 100px;
 }
 
