@@ -1,14 +1,20 @@
-
-/* 나눔고딕 폰트 설정 */
+/* 나눔고딕 폰라이드트 설정 */
 @import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 
 /* 모든 요소에 박스 모델과 나눔고딕 폰트 적용 */
 * {
   box-sizing: border-box;
   font-family: 'Nanum Gothic';
+  user-select: none; /* 모든 요소에서 텍스트 선택 방지 */
+}
+
+span:focus,
+img:focus {
+  outline: none; /* 포커스 시 외곽선 제거 */
 }
 
 /* 배경색 설정과 기본 여백 제거 */
+
 body {
   background-color: hsl(0, 0%, 100%);
   margin: 0;
@@ -34,10 +40,11 @@ a {
   display: grid;
   grid-template-areas:
     'aside header' /* 첫 번째 행: 사이드바와 헤더 */
-    'aside main'; /* 두 번째 행: 사이드바와 메인 */
-  height: 100vh;
+    'aside main' /* 두 번째 행: 사이드바와 메인 */
+    'aside footer'; /* !!!추가된 부분 */
+
   grid-template-columns: 260px auto; /* 열 너비 설정 */
-  grid-template-rows: 54px auto; /* 행 높이 설정 */
+  grid-template-rows: 54px auto /* !!!추가된 부분 */ 150px;
 }
 
 /* 헤더 스타일 설정 */
@@ -50,6 +57,10 @@ a {
   align-items: center;
   justify-content: center;
   padding: 0 20px;
+  padding-left: 260px;
+  position: fixed;
+  border-bottom: 1px solid #dddddd;
+  z-index: 100;
 }
 
 /* 헤더 바의 레이아웃과 정렬 설정 */
@@ -315,10 +326,13 @@ input[type='range']::-webkit-slider-thumb:active {
 
 /* 사이드바 스타일 설정 */
 .aside {
-  position: relative;
+  position: fixed;
   grid-area: aside;
   height: 100%;
+  width: 260px; /* !!!추가된 부분 */
   background-color: #ffc9b6;
+  z-index: 101;
+  border-right: 1px solid #dddddd;
 }
 
 /* 로고 영역 설정 */
@@ -328,6 +342,7 @@ input[type='range']::-webkit-slider-thumb:active {
   align-items: center;
   margin-bottom: 20px;
   background-color: white;
+  border-bottom: 1px solid #dddddd;
 }
 .side-logo > img:nth-child(1) {
   width: 55px;
@@ -360,17 +375,20 @@ input[type='range']::-webkit-slider-thumb:active {
 /* 검색박스 입력 부분 설정 */
 .search-box input {
   width: 100%;
-  height: 32px;
+  height: 38px;
   padding: 5px 10px 5px 40px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #b3b3b3;
   outline: none;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+.search-box input:hover {
+  cursor: pointer;
+}
 .search-box input:focus {
-  border-color: #ff6f61;
-  box-shadow: 0 0 3px #ff6f6180;
+  border-color: #919191;
+  box-shadow: 0 0 1px #919191;
 }
 
 /* 검색박스 아이콘 설정 */
@@ -379,7 +397,8 @@ input[type='range']::-webkit-slider-thumb:active {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #ffb398;
+  color: #3b3b3b;
+  cursor: pointer;
 }
 
 /* 메뉴 전체 설정 */
@@ -391,16 +410,15 @@ input[type='range']::-webkit-slider-thumb:active {
 .menu-item {
   display: flex;
   align-items: center;
-  height: 34px;
+  height: 38px;
   padding: 10px;
   margin-bottom: 10px; /* 메뉴 항목 간 간격 */
   border-radius: 5px;
   background-color: white;
-  border: 1px solid#ccc;
-  color: #333;
-  font-weight: bold;
+  border: 1px solid#b3b3b3;
+  color: #3b3b3b;
+  font-weight: 600;
 }
-
 
 /* 고객센터 버튼 설정 */
 .customer-support {
@@ -425,7 +443,7 @@ input[type='range']::-webkit-slider-thumb:active {
 
 /* 메뉴 아이콘 설정 */
 .menu-item > .side-menu-icon {
-  color: #ffb398;
+  color: #3b3b3b;
 }
 
 /* 메뉴 이벤트 처리 */
@@ -441,31 +459,277 @@ input[type='range']::-webkit-slider-thumb:active {
 /* 메인 콘텐츠 영역 설정 */
 .main {
   grid-area: main;
-  background-color: whitesmoke;
-  height: 100%;
-  overflow: scroll;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+
+  /* max-width: 1620px; */
 }
 
 /* 메인 컨테이너 설정 */
-.main-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  margin: 20px;
+h2 {
+  font-weight: bold;
+  font-size: 28px;
 }
 
-/* 섹션 스타일 */
-/* .section {
-  height: 350px;
-  background-color: #d6d6d6;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
+/* 섹션 설정 */
+#section1 {
+  position: relative;
+}
+
+/* 섹션 헤더 설정 */
+.section-header {
+  margin-bottom: 20px;
+}
+
+/* 섹션 메인 설정 */
+.section-main {
   overflow: hidden;
-} */
+}
+
+/* 슬라이드 컨테이너 설정 */
+.slider-container {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* 아이템 박스 설정 */
+.item {
+  flex: 0 0 calc(16.9% - 20px);
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* 아이템 이미지 설정 */
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.item img:hover {
+  filter: brightness(0.7);
+}
+
+/* 노래 정보 */
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-title {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.song-sub {
+  font-size: 13px;
+  color: gray;
+}
+
+/* 슬라이드 버튼 */
+.slider-btn {
+  position: absolute;
+  /* 수직 중앙 배치 */
+  top: 55%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #ffb398;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-btn2 {
+  position: absolute;
+  /* 수직 중앙 배치 */
+  top: 60%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #ffb398;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-btn3 {
+  position: absolute;
+  /* 수직 중앙 배치 */
+  top: 68%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #ffb398;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-icon {
+  font-size: 35px; /* 아이콘 크기 조정 */
+  color: #6a6a6a; /* 아이콘 색상 변경 (필요 시) */
+}
+
+.slider-btn.left {
+  left: -30px;
+}
+
+.slider-btn.right {
+  right: -30px;
+}
+
+#section2 {
+  padding: 0px 20px;
+  position: relative;
+}
+
+.track-list {
+  display: flex;
+  flex: 0 0 calc(25.33% - 20px);
+  flex-direction: column;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid whitesmoke;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.track:hover {
+  filter: brightness(0.7);
+}
+
+.track img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 7px;
+  padding: 3px;
+}
+
+.track-info {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.track-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.artist {
+  font-size: 12px;
+
+  color: rgb(65, 63, 63);
+}
+
+#section3 {
+  padding: 0px 20px;
+  position: relative;
+}
+
+/* 아이템 박스 설정 */
+.sec3-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 0 0 calc(33.7% - 20px);
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: white;
+}
+
+@media (max-width: 1400px) {
+  .sec3-item {
+    flex: 0 0 calc(51% - 20px);
+  }
+  .track-list {
+    flex: 0 0 calc(33.6% - 20px);
+  }
+  .item {
+    flex: 0 0 calc(25.4% - 20px);
+  }
+  .footer-letf {
+    display: none;
+  }
+}
+
+/* 아이템 이미지 설정 */
+.sec3-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  filter: brightness(0.9);
+  transition: 0.5s;
+}
+
+.sec3-item img:hover {
+  filter: brightness(0.7);
+}
+
+.slide-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.s-info1 {
+  font-size: 14px;
+  color: gray;
+}
+.s-info2 {
+  font-size: 18px;
+  color: black;
+}
+.s-info3 {
+  font-size: 16px;
+
+  color: gray;
+}
+
+/* 노래 정보 */
+.sec3-item-info {
+  position: absolute;
+  font-size: 12px;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#section4 {
+  padding: 0px 20px;
+  position: relative;
+}
+#section5 {
+  padding: 0px 20px;
+  position: relative;
+}
+#section6 {
+  padding: 0px 20px;
+  position: relative;
+}
+
+/* !!!추가된 부분 */
+
 .footer {
   position: relative;
   margin-top: 20px;
@@ -475,26 +739,28 @@ input[type='range']::-webkit-slider-thumb:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #dddddd;
 }
 
 .footer-letf {
   position: absolute;
-  left: 20px;
-  bottom: 20px;
+  left: 10px;
+  bottom: 10px;
   color: #8b8b8b;
   font-size: 14px;
 }
 
 .footer-l-hi {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-l-hi > a {
-  color: #8b8b8b;
-  font-size: 18px;
+  color: #353535;
+  font-size: 14px;
+  font-weight: bold;
 }
 .footer-l-lo p {
-  color: white;
+  color: rgb(107, 107, 107);
   margin-bottom: 5px;
   line-height: 1.5;
 }
@@ -506,12 +772,12 @@ input[type='range']::-webkit-slider-thumb:active {
 
 .footer-service li a {
   font-size: 12px;
-  color: white;
+  color: rgb(107, 107, 107);
 }
 
 .footer-service li::after {
   content: '|';
-  color: white;
+  color: rgb(133, 132, 132);
   margin-left: 5px;
 }
 
@@ -526,12 +792,12 @@ input[type='range']::-webkit-slider-thumb:active {
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 110px;
+  height: 110px;
   margin-right: 10px;
 }
 
 .logo2 {
-  width: 300px;
-  height: 100px;
+  width: 200px;
+  height: 80px;
 }
